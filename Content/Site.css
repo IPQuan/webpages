@@ -1,0 +1,59 @@
+﻿html {  }
+
+body { background-color:#f6f6f6 }
+
+@font-face {
+  font-family: 'iconfont';  /* project id 240203 */
+  src: url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.eot');
+  src: url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.svg#iconfont') format('svg');
+}
+
+.iconfont { font-family:iconfont }
+
+/*导航栏*/
+.navbar { min-height:55px; margin-bottom:0; }
+
+.navbar-default { background-color:#f6f6f6; border-bottom:3px solid #50e2e3; }
+
+.navbar-brand > img { height:46px }
+
+.navbar-brand { margin: 3px 38px 6px 0; padding:0; height:auto }
+
+.navbar-default .navbar-nav > li > a { font-size:17px; color:#1c9dbf; letter-spacing:5px; padding:17px 15px 18px }
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover { font-size:17px; color:#1c9dbf; letter-spacing:5px; }
+
+.navbar-form .form-group { width:271px; height:40px; background: #dfeff6; border: 2px solid #50e2e3; border-radius: 100px; }
+
+.navbar-form .form-control { display:inline-block; height:36px; width: 230px; text-align:center; border-radius: 100px; background: #dfeff6; border:none; box-shadow:none }
+
+.navbar-form button { background:none; border:none }
+
+.navbar-right { margin-right:-30px }
+
+div.navbar-right > * { display:inline-block }
+
+.navbar-right ul { float:right }
+/*end 导航栏*/
+
+/*footer*/
+.cooperate { background:#474f59; font-size:18px; color:#fff }
+
+.cooperate .col-md-2 { padding:25px 0; }
+
+.cooperate .col-md-2 span { line-height:50px }
+
+.footer-link { background:#23282e; }
+
+.footer-link img { margin-top:-10px }
+
+.footer-link .col-md-2 { padding:48px 0 0; font-size:16px; color:#cacaca; line-height:30px; }
+
+.footer-link .col-md-2 *:first-child { font-size:18px; color:#fff; margin-bottom:6px; }
+
+.copyright-text { font-size:18px; color:#fff; margin:52px auto 48px; }
+/*end footer*/
+

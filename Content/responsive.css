@@ -1,0 +1,12 @@
+﻿@media only screen and (max-width: 767px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand { margin-left:15px }
+    .navbar-default .navbar-nav > li > a { padding-top: 10px; padding-bottom:10px }
+    .navbar-form .form-group { height:30px; border-width:1px }
+    .navbar-form .form-control { height:26px }
+    .nav > li { text-align:center }
+    .navbar-form .form-group { margin:auto }
+    .navbar-right { margin-right:0 }
+    div.navbar-right > * { display:block }
+    .navbar-right ul { float:none }
+    .cooperate, .footer-link { text-align:center }
+}
