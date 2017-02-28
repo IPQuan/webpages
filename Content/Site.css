@@ -11,7 +11,7 @@ body { background-color:#f6f6f6 }
   url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.svg#iconfont') format('svg');
 }
 
-.iconfont { font-family:iconfont }
+i { font-family:iconfont; font-style:normal }
 
 /*导航栏*/
 .navbar { min-height:55px; margin-bottom:0; }
@@ -56,4 +56,32 @@ div.navbar-right > * { display:inline-block }
 
 .copyright-text { font-size:18px; color:#fff; margin:52px auto 48px; }
 /*end footer*/
+
+/*用户中心 menu*/
+.menu-left { height:1270px; margin:30px 0; padding:0; box-shadow:2px 0 10px 0 rgba(0,0,0,0.10); background:#fafafa; }
+
+.menu-right { height:1270px; margin:30px 0; padding:0; background:#fff; }
+
+.menu-left .user-center-text { background:#3ebcd0; height:45px; color:#fff; letter-spacing:1.5px; text-align:center; font-size:18px; line-height:45px }
+
+.menu-left .user-center-text span { margin-left:15px }
+
+.menu-left .avatar { text-align:center; }
+
+.menu-left .avatar img { width: 125px; height: 125px; border-radius: 100%; margin:20px auto; }
+
+.menu-left .user-name { background: #3ebcd0; height: 30px; line-height:30px; color:#fff; text-align:center; letter-spacing:1.25px; font-size:15px; }
+
+.menu-left ul.menu-list { list-style:none; padding:0; margin:0 }
+
+.menu-left ul.menu-list li {  background:#f9f9f9; height:46px; padding:14px 0; border-bottom:1px solid #ededed; }
+
+ul.menu-list li i, ul.menu-list li img { display:inline; position:absolute; left:33px; color:#3ebcd0; font-size:18px; line-height:21px }
+
+ul.menu-list li { font-size: 14px; color: #4a4a4a; letter-spacing: 1.17px; text-align: center; }
+
+ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing: 1.25px; text-align: center; }
+
+.fixed-width { width:1170px }
+/*end 用户中心 menu*/
 
