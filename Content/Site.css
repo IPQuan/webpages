@@ -60,7 +60,7 @@ div.navbar-right > * { display:inline-block }
 /*用户中心 menu*/
 .menu-left { height:1270px; margin:30px 0; padding:0; box-shadow:2px 0 10px 0 rgba(0,0,0,0.10); background:#fafafa; }
 
-.menu-right { height:1270px; margin:30px 0; padding:0; background:#fff; }
+.menu-right { height:1270px; margin:30px 0; padding:0 60px 0 47px; background:#fff; }
 
 .menu-left .user-center-text { background:#3ebcd0; height:45px; color:#fff; letter-spacing:1.5px; text-align:center; font-size:18px; line-height:45px }
 
@@ -84,4 +84,22 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 
 .fixed-width { width:1170px }
 /*end 用户中心 menu*/
+
+/*个人资料页面*/
+
+.menu-right { height:1270px; margin:30px 0; padding:0 60px 0 47px; background:#fff; }
+
+.menu-right header { width:87px; margin-bottom:10px; font-size: 16px; color: #4a4a4a; letter-spacing: 1.33px; padding-top:5px; line-height: 35px; text-align: center; }
+
+.menu-right header hr { margin:0; height:5px; background:#3ebcd0; border:none; border-radius:3px }
+
+.menu-right section { margin-bottom:20px }
+
+.menu-right section .col-xs-2 { line-height: 45px; white-space:pre; font-size: 16px; font-weight:normal; color: #4a4a4a; letter-spacing: 1.33px; }
+
+.menu-right section .col-xs-2 i { font-style:normal; margin-right:11px; color:#3ebcd0; line-height: 45px; font-size:20px; vertical-align:-1px }
+
+.menu-right section .col-xs-10 { padding:13px 15px; }
+
+/*end 个人资料页面*/
 
