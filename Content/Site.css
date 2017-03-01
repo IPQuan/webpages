@@ -1,6 +1,4 @@
-﻿html {  }
-
-body { background-color:#f6f6f6 }
+﻿body { background-color:#f6f6f6 }
 
 @font-face {
   font-family: 'iconfont';  /* project id 240203 */
@@ -12,6 +10,8 @@ body { background-color:#f6f6f6 }
 }
 
 i { font-family:iconfont; font-style:normal }
+
+body > .container { margin-top:55px }
 
 /*导航栏*/
 .navbar { min-height:55px; margin-bottom:0; }
