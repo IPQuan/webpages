@@ -102,20 +102,47 @@
                         个人资料<hr />
                     </header>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>昵称</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>昵称</div>
+                        <div class="value col-xs-10 placeholder">
+                            <label>*********</label>
+                            <input class="form-control" onblur="finish_to_edit(this)" />
+                            <i onclick="ready_to_edit(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>手机</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>性别</div>
+                        <div class="value col-xs-10 placeholder">
+                            <label><input type="radio" name="sex" value="male">男</label>
+                            <label><input type="radio" name="sex" value="female">女</label>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>电子邮件</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>手机</div>
+                        <div class="value col-xs-3 placeholder">
+                            <label>*********</label>
+                            <input class="form-control" onblur="finish_to_edit(this)" />
+                            <i onclick="ready_to_edit(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
+                        </div>
+                        <div class="value col-xs-2">
+                            <span class="no-auth"><i>?</i>未认证</span>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>个人简介</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>电子邮件</div>
+                        <div class="value col-xs-3 placeholder">
+                            <label>*********</label>
+                            <input class="form-control" onblur="finish_to_edit(this)" />
+                            <i onclick="ready_to_edit(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
+                        </div>
+                        <div class="value col-xs-2">
+                            <span class="auth"><i>✓</i>已认证</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field col-xs-2"><i>•</i>个人简介</div>
+                        <div class="col-xs-10 edit">
+                            <textarea class="form-control multi-row" placeholder="简单介绍一下你自己！"></textarea>
+                        </div>
                     </div>
                 </section>
                 <section>
@@ -123,12 +150,26 @@
                         实名认证<hr />
                     </header>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>真实姓名</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>真实姓名</div>
+                        <div class="value col-xs-3 placeholder">
+                            <label>*********</label>
+                            <a href="authentication.html"><i data-toggle="tooltip" data-placement="top" title="认证">&#xe61c;</i></a>
+                        </div>
+                        <div class="value col-xs-2">
+                            <span class="no-auth"><i>?</i>未认证</span>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>证件</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>证件</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea readonly="readonly" class="auth-info form-control">身份证 ********************</textarea>
+                            <div class="auth-text">
+                                <i>&#xe679;</i>你已经完成实名认证，实名认证信息必须真实
+                            </div>
+                            <div class="auth-text" style="display:none">
+                                <i>&#xe679;</i>你还未进行实名认证，不能使用充值提现功能
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section>
@@ -136,21 +177,29 @@
                         社交账号<hr />
                     </header>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>新浪微博</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>新浪微博</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入你的新浪微博地址"></textarea>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>腾讯QQ</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>腾讯QQ</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入你的QQ号码"></textarea>
+                        </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>微信</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>微信</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入你的微信号码"></textarea>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>网易乐乎</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>网易乐乎</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入你的网易LOFTER地址"></textarea>
+                        </div>
                     </div>
                 </section>
                 <section>
@@ -158,22 +207,33 @@
                         收件地址<hr />
                     </header>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>收件人姓名</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>收件人姓名</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入收件人的姓名"></textarea>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>收件人电话</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>收件人电话</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入收件人的电话号码"></textarea>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>邮编</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>邮编</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control" placeholder="请输入收件地址的邮政编码"></textarea>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2"><i>•</i>收件地址</div>
-                        <div class="col-xs-10">111</div>
+                        <div class="field col-xs-2"><i>•</i>收件地址</div>
+                        <div class="value col-xs-10 edit">
+                            <textarea class="form-control multi-row" placeholder="请输入收件详细地址"></textarea>
+                        </div>
                     </div>
                 </section>
+                <div class="row text-center">
+                    <button class="btn btn-info save">保存</button>
+                </div>
             </div>
         </div>
     </div>
@@ -242,8 +302,11 @@
         </div>
     </footer>
 
-
+    <script>
+        
+    </script>
     <script src="Scripts/jquery-3.1.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/Site.js"></script>
 </body>
 </html>

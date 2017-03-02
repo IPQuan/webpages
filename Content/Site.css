@@ -2,16 +2,22 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 240203 */
-  src: url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.eot');
-  src: url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.eot?#iefix') format('embedded-opentype'),
-  url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.woff') format('woff'),
-  url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.ttf') format('truetype'),
-  url('http://at.alicdn.com/t/font_o1qumzx3w683erk9.svg#iconfont') format('svg');
+  src: url('http://at.alicdn.com/t/font_4b6b0785v35cow29.eot');
+  src: url('http://at.alicdn.com/t/font_4b6b0785v35cow29.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_4b6b0785v35cow29.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_4b6b0785v35cow29.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_4b6b0785v35cow29.svg#iconfont') format('svg');
 }
 
 i { font-family:iconfont; font-style:normal }
 
 body > .container { margin-top:55px }
+
+a:focus, a:hover { text-decoration:none }
+
+/*工具提示*/
+.tooltip-inner { background:#3ebcd0; }
+.tooltip.top .tooltip-arrow { border-top-color:#3ebcd0 }
 
 /*导航栏*/
 .navbar { min-height:55px; margin-bottom:0; }
@@ -93,13 +99,66 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 
 .menu-right header hr { margin:0; height:5px; background:#3ebcd0; border:none; border-radius:3px }
 
-.menu-right section { margin-bottom:20px }
+.menu-right section { margin-bottom:10px }
 
-.menu-right section .col-xs-2 { line-height: 45px; white-space:pre; font-size: 16px; font-weight:normal; color: #4a4a4a; letter-spacing: 1.33px; }
+.menu-right section .field { line-height: 45px; white-space:pre; font-size: 16px; font-weight:normal; color: #4a4a4a; letter-spacing: 1.33px; }
 
-.menu-right section .col-xs-2 i { font-style:normal; margin-right:11px; color:#3ebcd0; line-height: 45px; font-size:20px; vertical-align:-1px }
+.menu-right section .field i { font-style:normal; margin-right:11px; color:#3ebcd0; line-height: 45px; font-size:20px; vertical-align:-1px }
 
-.menu-right section .col-xs-10 { padding:13px 15px; }
+.menu-right section .value { padding:0 15px; line-height:45px }
+
+.placeholder label { margin:0 10px; font-size: 15px; color: #4a4a4a; font-weight:normal; letter-spacing: 1.25px; }
+
+.finished label { margin:0 10px; font-size: 15px; color: #4a4a4a; font-weight:normal; letter-spacing: 1px; line-height: 30px; }
+
+.placeholder i, .edit i, .finished i { color:#3ebcd0; font-size:16px; vertical-align:3px; cursor:pointer }
+
+.edit .form-control, .finished .form-control { border-radius:0; height:30px; overflow:hidden; vertical-align:3px; width:auto; margin-right:20px }
+
+.edit .form-control.multi-row, .finished .form-control.multi-row { height:120px; }
+
+.edit textarea.form-control { width:100% }
+
+.placeholder .form-control { display:none }
+
+.placeholder label, .placeholder i { display:inline }
+
+.edit .form-control, .edit i { display:inline }
+
+.edit label { display:none }
+
+.finished .form-control { display:none }
+
+.finished label, .finished i { display:inline }
+
+.placeholder label input[type="radio"] { margin-right:5px }
+
+.placeholder label + label { margin-left:0 }
+
+.edit textarea.auth-info { height:31px; text-align:left; font-size:14px; }
+
+[readonly].auth-info { background:#f9f9f9; box-shadow:none; cursor:default }
+.auth-info:focus { border-color:#ccc }
 
 /*end 个人资料页面*/
+
+/*认证图标*/
+.no-auth, .auth { border-radius:10px; padding:2px 10px 2px 2px; color:#fff }
+
+.no-auth i, .auth i { font-family:"Microsoft YaHei"; background: #fff; margin-right: 4px; border-radius: 100%; line-height: 16px; width: 16px; height: 16px; display: inline-block; font-size: 12px; text-align:center; }
+
+.no-auth { background:#f70e4c; }
+
+.no-auth i { color: #f70e4c; }
+
+.auth { background:#3ebcd0; }
+
+.auth i { color: #3ebcd0; }
+
+.auth-text { text-align:left; color:#3ebcd0; }
+
+.auth-text i { margin-right:6px; vertical-align:-1px }
+/*end 认证图标*/
+
+button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8px; letter-spacing:6px; font-size:18px; }
 
