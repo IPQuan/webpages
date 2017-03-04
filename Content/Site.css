@@ -105,15 +105,15 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 
 .menu-right section .field i { font-style:normal; margin-right:11px; color:#3ebcd0; line-height: 45px; font-size:20px; vertical-align:-1px }
 
-.menu-right section .value { padding:0 15px; line-height:45px }
+.menu-right section .value { padding:0 15px; }
 
-.placeholder label { margin:0 10px; font-size: 15px; color: #4a4a4a; font-weight:normal; letter-spacing: 1.25px; }
+.placeholder label { margin:0 10px; line-height:45px; font-size: 15px; color: #4a4a4a; font-weight:normal; letter-spacing: 1.25px; }
 
-.finished label { margin:0 10px; font-size: 15px; color: #4a4a4a; font-weight:normal; letter-spacing: 1px; line-height: 30px; }
+.finished label { margin:0 10px;  line-height:45px; font-size: 15px; color: #4a4a4a; font-weight:normal; letter-spacing: 1px; }
 
 .placeholder i, .edit i, .finished i { color:#3ebcd0; font-size:16px; vertical-align:3px; cursor:pointer }
 
-.edit .form-control, .finished .form-control { border-radius:0; height:30px; overflow:hidden; vertical-align:3px; width:auto; margin-right:20px }
+.edit .form-control, .finished .form-control { border-radius:0; font-size:15px; height:30px; overflow:hidden; width:auto; margin:8px 20px 0 0 }
 
 .edit .form-control.multi-row, .finished .form-control.multi-row { height:120px; }
 
@@ -155,7 +155,7 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 
 .auth i { color: #3ebcd0; }
 
-.auth-text { text-align:left; color:#3ebcd0; }
+.auth-text { margin-top:20px; text-align:left; color:#3ebcd0; }
 
 .auth-text i { margin-right:6px; vertical-align:-1px }
 /*end 认证图标*/
