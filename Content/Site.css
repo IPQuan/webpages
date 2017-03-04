@@ -80,7 +80,9 @@ div.navbar-right > * { display:inline-block }
 
 .menu-left ul.menu-list { list-style:none; padding:0; margin:0 }
 
-.menu-left ul.menu-list li {  background:#f9f9f9; height:46px; padding:14px 0; border-bottom:1px solid #ededed; }
+.menu-left ul.menu-list li { background:#f9f9f9; height:46px; padding:14px 0; border-bottom:1px solid #ededed; }
+
+.menu-left ul.menu-list li a { color:#4a4a4a }
 
 ul.menu-list li i, ul.menu-list li img { display:inline; position:absolute; left:33px; color:#3ebcd0; font-size:18px; line-height:21px }
 
@@ -162,7 +164,7 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 
 button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8px; letter-spacing:6px; font-size:18px; }
 
-
+/*安全中心*/
 .value select.form-control { padding:3px 15px; width:198px }
 
 .value.notice div { background:#f9f9f9; border:1px solid #cacaca; height:31px; margin-top:7px; padding:3px 15px }
@@ -170,3 +172,36 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 .value.notice input { margin-right: 10px }
 
 .value.notice label { font-weight:normal }
+/*end 安全中心*/
+
+/*实名认证*/
+.auth-note { line-height: 45px; font-size: 15px; color: #4a4a4a; letter-spacing: 1.25px; }
+
+.auth-result-true { font-size:15px; line-height:45px; text-align:left; color:#3ebcd0; }
+
+.auth-result-false { font-size:15px; line-height:45px; text-align:left; color:#f70e4b; }
+
+.auth-result-true i { margin-right:6px; vertical-align:-1px; color:#3ebcd0; }
+
+.auth-result-false i { margin-right:6px; vertical-align:-1px; color:#f70e4b; }
+
+.auth-note2 { font-size:12px; line-height:45px; color:#1d9dbf; }
+
+.auth-note2 input { margin-right: 4px }
+
+.auth-btn { background: #3ebcd0; border-radius: 3px; width: 86px; height: 26px; padding:0 }
+
+.cert-upload { float:left; margin:12px 20px 0 0; text-align:center; }
+
+.cert-upload i { position: absolute; margin:30px 0 0 -12px;  font-size: 72px; color: #fff; opacity: 1; top: 0px; }
+
+.cert-upload1 { width: 225px; height: 145px; background-image:url(../Images/certification1.png); }
+
+.cert-upload2 { width: 225px; height: 145px; background-image:url(../Images/certification2.png); }
+
+.cert-upload .tooltip { top:20px !important }
+
+#fileupload1, #fileupload2 { display:none }
+
+.cert-text { font-size: 15px; color: #4a4a4a; letter-spacing: 1.25px; line-height: 30px; }
+/*end 实名认证*/
