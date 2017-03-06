@@ -23,10 +23,12 @@ $(function ()
 $("#fileupload1").fileinput({
     language: 'zh',
     showUpload: false, //是否显示上传按钮
+    allowedFileExtensions: ['jpg', 'png', 'gif'],//接收的文件后缀
 });
 $("#fileupload2").fileinput({
     language: 'zh',
     showUpload: false, //是否显示上传按钮
+    allowedFileExtensions: ['jpg', 'png', 'gif'],//接收的文件后缀
 });
 
 function fileupload1_change()
