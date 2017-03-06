@@ -191,17 +191,13 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 
 .auth-btn { background: #3ebcd0; border-radius: 3px; width: 86px; height: 26px; padding:0 }
 
-.cert-upload { float:left; margin:12px 20px 0 0; text-align:center; }
+.cert-upload { position:relative; margin:12px 20px 0 0; text-align:center; }
 
-.cert-upload i { position: absolute; margin:30px 0 0 -12px;  font-size: 72px; color: #fff; opacity: 1; top: 0px; }
+.cert-upload i.add-icon1, .cert-upload i.add-icon2 { position: absolute; left:50%; top: 0px; margin:30px 0 0 -12px;  font-size: 72px; color: #fff; }
 
-.cert-upload1 { width: 225px; height: 145px; background-image:url(../Images/certification1.png); }
-
-.cert-upload2 { width: 225px; height: 145px; background-image:url(../Images/certification2.png); }
+.cert-upload1, .cert-upload2 { width: 250px }
 
 .cert-upload .tooltip { top:20px !important }
-
-#fileupload1, #fileupload2 { display:none }
 
 .cert-text { font-size: 15px; color: #4a4a4a; letter-spacing: 1.25px; line-height: 30px; }
 /*end 实名认证*/

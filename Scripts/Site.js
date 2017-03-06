@@ -20,3 +20,25 @@ $(function ()
 {
     $('[data-toggle="tooltip"]').tooltip()
 })
+$("#fileupload1").fileinput({
+    language: 'zh',
+    showUpload: false, //是否显示上传按钮
+});
+$("#fileupload2").fileinput({
+    language: 'zh',
+    showUpload: false, //是否显示上传按钮
+});
+
+function fileupload1_change()
+{
+    $("#fileupload1").show();
+    $(".cert-upload1").hide();
+    $(".cert-upload1").hide();
+}
+
+function fileupload2_change()
+{
+    $("#fileupload1").show();
+    $(".cert-upload2").hide();
+    $(".cert-upload2").hide();
+}

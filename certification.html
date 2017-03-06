@@ -8,6 +8,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/responsive.css" rel="stylesheet" />
+    <link href="Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -138,21 +139,19 @@
                     </div>
                     <div class="row">
                         <div class="field col-xs-2"><i>•</i>上传证件照</div>
-                        <div class="value col-xs-10 edit">
+                        <div class="value col-xs-4">
                             <div class="cert-upload">
-                                <div class="cert-upload1">
-                                    
-                                </div>
-                                <i data-toggle="tooltip" data-placement="top" title="添加照片" onclick="$('#fileupload1').click()">+</i>
-                                <input type="file" id="fileupload1" />
+                                <img class="cert-upload1" src="Images/certification1.png" />
+                                <i class="add-icon1" data-toggle="tooltip" data-placement="top" title="添加照片" onclick="$('#fileupload1').click()">+</i>
+                                <input class="form-control" type="file" id="fileupload1" onchange="fileupload1_change()" />
                                 <div class="cert-text">身份证正面照片</div>
                             </div>
+                        </div>
+                        <div class="value col-xs-4">
                             <div class="cert-upload">
-                                <div class="cert-upload2">
-                                    
-                                </div>
-                                <i data-toggle="tooltip" data-placement="top" title="添加照片" onclick="$('#fileupload2').click()">+</i>
-                                <input type="file" id="fileupload2" />
+                                <img class="cert-upload2" src="Images/certification2.png" />
+                                <i class="add-icon2" data-toggle="tooltip" data-placement="top" title="添加照片" onclick="$('#fileupload2').click()">+</i>
+                                <input class="form-control" type="file" id="fileupload2" onchange="fileupload2_change()" />
                                 <div class="cert-text">身份证反面照片</div>
                             </div>
                         </div>
@@ -249,6 +248,8 @@
     </script>
     <script src="Scripts/jquery-3.1.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/fileinput.min.js"></script>
+    <script src="Scripts/locales/zh.js"></script>
     <script src="Scripts/Site.js"></script>
 </body>
 </html>
