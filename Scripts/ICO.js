@@ -110,11 +110,15 @@ window.onresize=function(){//屏幕大小发生变化时
     resizeBanner();
     var length = $('.projectWrapper').children('div').length + 1;
     for(var i=1;i<=length;i++){
-        resizeSmation('project'+i,parseInt($('#project'+i+' .bar')[0].style.width));
+        if($('#project'+i+' .bar')[0]){
+            resizeSmation('project'+i,parseInt($('#project'+i+' .bar')[0].style.width));
+        }
     }
 };
 window.onload = function(){//页面加载完成时
-    newSwiper('project1','swiper-pagination2');
+    if($('#project1')){
+        newSwiper('project1','swiper-pagination2');
+    }
     smation('project1',parseInt($('#project1 .bar')[0].style.width));
     resizeBanner();
 };
