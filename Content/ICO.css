@@ -1,0 +1,293 @@
+.about-ico{
+    font-family:PingFangSC-Regular;
+}
+.about-ico .ico-banner img{
+    width:100%;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align:left;
+}
+.text-right{
+    text-align: right;
+}
+.font-28{
+    font-size: 28px;
+}
+.font-16{
+    font-size: 16px;
+}
+.font-30{
+    font-size:30px;
+}
+.font-32{
+    font-size:32px;
+}
+.font-34{
+    font-size:34px;
+}
+.font-35{
+    font-size:35px;
+}
+.font-36{
+    font-size:36px;
+}
+.font-37{
+    font-size:37px;
+}
+.floatRight{
+    float:right;
+}
+.color4A{
+    color:#4a4a4a;
+}
+.about-ico .p-title{
+    line-height: 120px;
+    letter-spacing: 4.67px;
+}
+#bannerSwiper{
+    margin-top: 58px;
+}
+#bannerSwiper .swiper-slide{
+    background: url('../Images/swiper1.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    min-height:225px;
+}
+.p-introduction{
+    color:#535353;
+    letter-spacing:0;
+    line-height:30px;
+}
+.p-owner{
+    text-align: center;
+    font-size:18px;
+}
+.p-owner div{
+    line-height: 40px;
+}
+.marginTop13{
+   margin-top:13px;
+}
+.p-owner img {
+    width: 150px;
+}
+.p-owner .userN{
+    color:#2896C8;
+}
+.p-owner .like{
+    display: inline-block;
+    color:#fff;
+    background:#ff957f;
+    border-radius:100px;
+    width:60px;
+    height:20px;
+    font-size:14px;
+    letter-spacing:0;
+    line-height:20px;
+    text-align:center;
+}
+.p-owner .like .concerned{
+    color:#f00;
+}
+.p-owner .like .unconcerned{
+    color:#fff;
+}
+.p-owner .like i{
+    font-size:14px;
+    line-height:22px;
+    margin-right:3px;
+}
+.chatDetail{
+    display: block;
+    background:#50e2e3;
+    border-radius:21px;
+    width:180px;
+    height:36px;
+    line-height:36px;
+    font-size:18px;
+    color:#4a4a4a;
+    letter-spacing:3px;
+    text-align:center;
+    margin:15px auto 30px auto;
+    cursor: pointer;
+}
+.chatDetail:hover{
+    color:#4a4a4a;
+}
+.chatDetail i{
+    color: #fff;
+    font-size: 28px;
+    position: absolute;
+    right: 50%;
+    margin-right: -92px;
+    margin-top:1px;
+}
+.lineHr{
+    width:100%;
+    height:1px;
+    background: #CDCDCD;
+}
+.ico-progress{
+    font-size:18px;
+    letter-spacing: 3px;
+    padding:55px 0 48px 0;
+}
+.ico-progress .row .col-xs-12 > div{
+    line-height:31px;
+}
+.ico-progress .row .col-xs-12.lastOne >div{
+    line-height:62px;
+    font-size:24px;
+    letter-spacing: 4px;
+}
+.ico-progress .floatRight{
+    color:#0a8bc5;
+}
+.ico-progress .row .col-xs-12.lastOne >div .floatRight{
+    color:#1d9dbf;
+}
+.barWrapper{
+    margin-top:45px;
+}
+.bar{
+    display: block;
+    background:#50e2e3;
+    line-height: 20px;
+    border-radius:100px;
+    max-width:782px;
+    width:100%;
+    height:12px;
+    text-align: center;
+    color: #FFF;
+    margin:0 auto;
+}
+#bar{
+    background:#0a8bc5;
+    border-radius:100px;
+    height:20px;
+    top: -4px;
+    position: absolute;
+    line-height: 21px;
+    font-size: 16px;
+    text-align: right;
+    letter-spacing: 0;
+    padding-right:4px;
+}
+.ico-ranking .r-title{
+    font-size:28px;
+    color:#4a4a4a;
+    letter-spacing:4.67px;
+    line-height:120px;
+    text-align:center;
+}
+.ico-ranking i{
+    color: #3ebcd0;
+}
+.ico-ranking .rk-title{
+    font-size:16px;
+    color:#535353;
+    letter-spacing:0;
+    line-height:45px;
+}
+#barContent{
+    position: absolute;
+    color:#f6f6f6;
+    font-size:16px;
+    z-index:-1;
+    letter-spacing: 0;
+}
+.rk-line-content img{
+    width:25px;
+    margin-right:15px;
+    display: inline;
+}
+.rk-line-content>div,.rk-update {
+    font-size:14px;
+    color:#535353;
+    letter-spacing:0;
+    line-height:45px;
+    text-align:center;
+}
+.rk-line-content>div{
+    height:45px;
+    overflow: hidden;
+}
+.rk-update{
+    padding:39px 0 15px 0;
+}
+.swiper-pagination-bullet{
+    border:1px solid #fff;
+    background: none;
+    width:12px;
+    height:12px;
+}
+.swiper-pagination-bullet-active{
+    background: #fff;
+}
+#bannerSwiper.swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom:30px;
+}
+#icoSwiper img{
+    width:100%;
+}
+#icoSwiper.swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom:15px;
+}
+.ico-more{
+    margin:45px 0 48px 0;
+}
+.ico-more a{
+    display: block;
+    position: relative;
+    background:#fff;
+    border:1px solid #50e2e3;
+    border-radius:21px;
+    max-width:448px;
+    width:100%;
+    height:34px;
+    line-height: 32px;
+    margin:0 auto;
+    font-size:18px;
+    letter-spacing: 10px;
+    color:#1d9dbf;
+    cursor: pointer;
+}
+.ico-more i{
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -14px;
+    font-size: 20px;
+    color:#50e2e3;
+}
+.icon-user{
+    display: inline-block;
+    margin-top: 5px;
+}
+@media all and (min-width:992px) {
+    .p-introduction{
+        float:left;
+        width:78%;
+    }
+    .p-owner{
+        width:22%;
+    }
+    .ico-progress .firstOne{
+        padding-right:75px;
+    }
+    .ico-progress .secondOne{
+        padding:0 60px 0 45px;
+    }
+    .ico-progress .lastOne{
+        padding-left:45px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    #bannerSwiper{
+        margin-top:115px;
+    }
+}
