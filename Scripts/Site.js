@@ -33,14 +33,16 @@ $("#fileupload2").fileinput({
 
 function fileupload1_change()
 {
-    $("#fileupload1").show();
-    $(".cert-upload1").hide();
-    $(".cert-upload1").hide();
+    setTimeout(function ()
+    {
+        $(".cert-upload1").attr("src", $("#fileupload_div1").find("img").attr("src"));
+    }, 100);
 }
 
 function fileupload2_change()
 {
-    $("#fileupload1").show();
-    $(".cert-upload2").hide();
-    $(".cert-upload2").hide();
+    setTimeout(function ()
+    {
+        $(".cert-upload2").attr("src", $("#fileupload_div2").find("img").attr("src"));
+    }, 100);
 }

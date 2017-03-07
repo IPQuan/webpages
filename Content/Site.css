@@ -197,6 +197,8 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 
 .cert-upload1, .cert-upload2 { width: 250px }
 
+#fileupload_div1, #fileupload_div2 { display:none }
+
 .cert-upload .tooltip { top:20px !important }
 
 .cert-text { font-size: 15px; color: #4a4a4a; letter-spacing: 1.25px; line-height: 30px; }
