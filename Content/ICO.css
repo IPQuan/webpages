@@ -1,8 +1,5 @@
-.about-ico{
+body{
     font-family:PingFangSC-Regular;
-}
-.about-ico .ico-banner img{
-    width:100%;
 }
 .text-center{
     text-align: center;
@@ -43,9 +40,21 @@
 .color4A{
     color:#4a4a4a;
 }
+.noPadding{
+    padding: 0!important;
+}
+.overflowAuto{
+    overflow: auto;
+}
+.about-ico .ico-banner img{
+    width:100%;
+}
 .about-ico .p-title{
     line-height: 120px;
     letter-spacing: 4.67px;
+}
+.about-ico .row,.ico-progress .row,.ico-ranking .row,.rk-update .row{
+    background: #fff;
 }
 #bannerSwiper{
     margin-top: 58px;
@@ -55,12 +64,13 @@
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
-    min-height:225px;
+    min-height:140px;
 }
 .p-introduction{
     color:#535353;
     letter-spacing:0;
     line-height:30px;
+    margin-bottom:10px;
 }
 .p-owner{
     text-align: center;
@@ -115,7 +125,7 @@
     margin:15px auto 30px auto;
     cursor: pointer;
 }
-.chatDetail:hover{
+.chatDetail:hover,.chatDetail:focus{
     color:#4a4a4a;
 }
 .chatDetail i{
@@ -134,6 +144,8 @@
 .ico-progress{
     font-size:18px;
     letter-spacing: 3px;
+}
+.ico-progress .row{
     padding:55px 0 48px 0;
 }
 .ico-progress .row .col-xs-12 > div{
@@ -216,7 +228,7 @@
     height:45px;
     overflow: hidden;
 }
-.rk-update{
+.rk-update .row{
     padding:39px 0 15px 0;
 }
 .swiper-pagination-bullet{
@@ -272,18 +284,28 @@
     .p-introduction{
         float:left;
         width:78%;
+        padding-left:60px;
     }
     .p-owner{
         width:22%;
+        padding-right: 25px;
     }
     .ico-progress .firstOne{
-        padding-right:75px;
+        padding:0 0 0 60px;
     }
     .ico-progress .secondOne{
-        padding:0 60px 0 45px;
+        padding: 0 55px 0 65px;
     }
     .ico-progress .lastOne{
-        padding-left:45px;
+        padding: 0 60px 0 0;
+    }
+}
+@media all and (min-width:1200px) {
+    .ico-progress .firstOne{
+        padding:0 60px 0 60px;
+    }
+    .ico-progress .lastOne{
+        padding: 0 60px 0 40px;
     }
 }
 @media all and (min-width: 768px) and (max-width: 1200px) {
