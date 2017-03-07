@@ -56,7 +56,7 @@ body{
 .about-ico .row,.ico-progress .row,.ico-ranking .row,.rk-update .row{
     background: #fff;
 }
-#bannerSwiper{
+#bannerSwiper,.topImg{
     margin-top: 58px;
 }
 #bannerSwiper .swiper-slide{
@@ -165,7 +165,7 @@ body{
 .barWrapper{
     margin-top:45px;
 }
-.bar{
+.barContentWrapper{
     display: block;
     background:#50e2e3;
     line-height: 20px;
@@ -177,7 +177,7 @@ body{
     color: #FFF;
     margin:0 auto;
 }
-#bar{
+.bar{
     background:#0a8bc5;
     border-radius:100px;
     height:20px;
@@ -205,9 +205,9 @@ body{
     letter-spacing:0;
     line-height:45px;
 }
-#barContent{
+.barContent{
     position: absolute;
-    color:#f6f6f6;
+    color:#fff;
     font-size:16px;
     z-index:-1;
     letter-spacing: 0;
@@ -280,6 +280,9 @@ body{
     display: inline-block;
     margin-top: 5px;
 }
+.topImg{
+    width:100%;
+}
 @media all and (min-width:992px) {
     .p-introduction{
         float:left;
@@ -309,7 +312,7 @@ body{
     }
 }
 @media all and (min-width: 768px) and (max-width: 1200px) {
-    #bannerSwiper{
+    #bannerSwiper,.topImg{
         margin-top:115px;
     }
 }
