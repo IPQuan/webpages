@@ -13,15 +13,18 @@ function newSwiper(project,paga){//每次加载新的项目,如果有轮播,则�
 }
 function resizeBanner(){//banner自适应
     var width = $(window).width();
-    var minHeight = 450;
+    var minHeight = 450,mH = 450;
     if(width>=1920){//满屏
         minHeight = parseInt(450 * width / 1920);
     }else if(width>1200){//1170
         minHeight = 450;
     }else{
         minHeight = parseInt(450 * width / 1200);
+        mH = parseInt(450 * width / 1200);
     }
     $('#bannerSwiper .swiper-slide').css('min-height',minHeight);
+    $('.topImg').css('min-height',minHeight);
+    $('.about-ico .ico-banner').css('min-height',mH);
 }
 function loadMore(){//加载更多.如果不是ICO,缺乏轮播数据以及ICO数据,则不显示
     var length = $('.projectWrapper').children('div').length + 1;
@@ -66,7 +69,7 @@ function loadMore(){//加载更多.如果不是ICO,缺乏轮播数据以及ICO�
         });
     }
     var icoRanking = '',icoCarousel = '';
-    var aboutIco = '<section class="about-ico"> <div class="container"> <div class="row ico-banner"> <div> <img src='+obj.image+' /> </div> </div> <div class="row"> <div class="col-xs-12"> <div class="text-center font-28 color4A p-title">'+obj.title+'</div> </div> </div> <div class="row color4A overflowAuto"> <div class="p-owner col-xs-12 visible-xs visible-sm"> <img src="Images/owner.png" /> <div class="marginTop13">项目发起人：<span class="userN">'+obj.editor+'</span></div> <div>关注人数：<span class="like"><i class='+obj.concern+'>&#xe760;</i>'+obj.concernPeople+'</span></div> </div> <div class="p-introduction text-left col-xs-12">'+obj.content+'</div> <div class="p-owner col-xs-12 hidden-xs hidden-sm"> <img src="Images/owner.png" /> <div class="marginTop13">项目发起人：<span class="userN">晓物物</span></div> <div>关注人数：<span class="like"><i class='+obj.concern+'>&#xe760;</i>'+obj.concernPeople+'</span></div> </div> <div class="col-xs-12"> <a class="chatDetail" href='+obj.link+'>项目详情页<i>&#xe604;</i></a> </div> </div></div> </section>';
+    var aboutIco = '<section class="about-ico"> <div class="container"> <div class="row ico-banner" style="background-image:url('+obj.image+')"> </div> <div class="row"> <div class="col-xs-12"> <div class="text-center font-28 color4A p-title">'+obj.title+'</div> </div> </div> <div class="row color4A overflowAuto"> <div class="p-owner col-xs-12 visible-xs visible-sm"> <img src="Images/owner.png" /> <div class="marginTop13">项目发起人：<span class="userN">'+obj.editor+'</span></div> <div>关注人数：<span class="like"><i class='+obj.concern+'>&#xe760;</i>'+obj.concernPeople+'</span></div> </div> <div class="p-introduction text-left col-xs-12">'+obj.content+'</div> <div class="p-owner col-xs-12 hidden-xs hidden-sm"> <img src="Images/owner.png" /> <div class="marginTop13">项目发起人：<span class="userN">晓物物</span></div> <div>关注人数：<span class="like"><i class='+obj.concern+'>&#xe760;</i>'+obj.concernPeople+'</span></div> </div> <div class="col-xs-12"> <a class="chatDetail" href='+obj.link+'>项目详情页<i>&#xe604;</i></a> </div> </div></div> </section>';
     var icoProgress ='<section class="ico-progress color4A"> <div class="container"><div class="row noPadding"> <div class="lineHr">&nbsp;</div> </div> <div class="row overflowAuto"> <div class="col-xs-12 col-sm-6 col-md-4 firstOne"> <div>目标金额：<div class="floatRight">'+obj.target+'</div></div> <div>开始时间：<div class="floatRight">'+obj.start+'</div></div> </div> <div class="col-xs-12 col-sm-6 col-md-4 secondOne"> <div>参与人数：<div class="floatRight">'+obj.people+'</div></div> <div>剩余时间：<div class="floatRight">'+obj.remain+'</div></div> </div> <div class="col-xs-12 col-sm-6 col-md-4 lastOne"> <div>已筹金额：<div class="floatRight">'+obj.raised+'</div></div> </div> <div class="col-xs-12 barWrapper"> <div class="barContentWrapper"> <div class="barContent"></div> <div class="bar" style="width:'+obj.completeDegree+';"> </div> </div> </div> </div> </div> </section>';
     if(rkContent!='') {
         icoRanking = '<section class="ico-ranking"> <div class="container text-center"> <div class="row noPadding"> <div class="lineHr">&nbsp;</div> </div> <div class="row"> <div class="col-xs-12 r-title">ICO排行榜</div> <div class="col-xs-4 font-35"> <i>&#xe645;</i> </div> <div class="col-xs-4 font-32"> <i class="icon-user">&#xe629;</i> </div> <div class="col-xs-4 font-37"> <i>&#xe6d7;</i> </div> </div> <div class="row rk-title"> <div class="col-xs-4">当前排名</div> <div class="col-xs-4">参与用户</div> <div class="col-xs-4">参与金额</div> </div> <div class="rk-line-content">' + rkContent + '</div> <div class="rk-update"> <div class="row"> 平均每10分钟更新一次,上次更新时间：<span>' + obj.icoTime + '</span> </div> </div> </div> </section>';
@@ -76,6 +79,7 @@ function loadMore(){//加载更多.如果不是ICO,缺乏轮播数据以及ICO�
     }
     $('.projectWrapper').append('<div id='+newId+'>' + aboutIco + icoProgress + icoRanking + icoCarousel + '</div>');
     resizeSmation(newId,obj.completeDegree);
+    resizeBanner();
     if(swipeContent!='') {
         newSwiper(newId, 'swiper-pagination0' + length);
     }
@@ -119,6 +123,15 @@ window.onload = function(){//页面加载完成时
     if($('#project1')){
         newSwiper('project1','swiper-pagination2');
     }
-    smation('project1',parseInt($('#project1 .bar')[0].style.width));
+    if($('#project1 .bar')){
+        smation('project1',parseInt($('#project1 .bar')[0].style.width));
+    }
     resizeBanner();
+    $('.ico-detail .ico-title .col-l-2').click(function(){
+        $('.ico-detail .ico-title .col-l-2').removeClass('active');
+        $('.ico-content > div').addClass('hide');
+        $(this).addClass('active');
+        var value = $(this).attr('value');
+        $('.'+value).removeClass('hide');
+    });
 };
