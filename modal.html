@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#passwordModal">修改登录密码</button>
+            <code>$("#passwordModal").modal();</code>
+        </div>
+        <br />
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#password2Modal">修改资金密码</button>
+            <code>$("#password2Modal").modal();</code>
+        </div>
+        <br />
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#verifyModal">短信验证</button>
+            <code>$("#verifyModal").modal();</code>
+        </div>
+        <br />
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#phoneModal">绑定手机号</button>
+            <code>$("#phoneModal").modal();</code>
+        </div>
+    </div>
+    
+
+    <!-- 修改登录密码 -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel">修改登录密码</h5>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="text" placeholder="当前密码" />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="新密码" />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="再输一遍新密码" />
+                    </div>
+                    
+                    
+                    <div class="modal-alert">
+                        <i>&#xe679;</i>新密码必须是 6 位以上英文字母、数字或符号，不能纯数字或纯字母
+                    </div>
+                    <div class="modal-alert">
+                        <i>&#xe679;</i>出于安全方面的考虑，修改密码后，你的账户将在 24 小时内无法提现。
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-change">修改</button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 修改资金密码 -->
+    <div class="modal fade" id="password2Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel">修改资金密码</h5>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="text" placeholder="新密码" />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="再输一遍新密码" />
+                    </div>
+                    <div class="verification-code">
+                        <input type="text" placeholder="图形验证码" />
+                        <img src="Images/verification-code.png" />
+                    </div>
+                    <div class="phone-code">
+                        <input type="text" placeholder="手机验证码" />
+                        <button class="btn btn-info">获取短信验证码</button>
+                    </div>
+
+                    <div class="modal-alert">
+                        <i>&#xe679;</i>新密码必须是 6 位以上英文字母、数字或符号，不能纯数字或纯字母
+                    </div>
+                    <div class="modal-alert">
+                        <i>&#xe679;</i>出于安全方面的考虑，修改密码后，你的账户将在 24 小时内无法提现。
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-change">修改</button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 短信验证 -->
+    <div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel">短信验证</h5>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div class="verification-code">
+                        <input type="text" placeholder="图形验证码" />
+                        <img src="Images/verification-code.png" />
+                    </div>
+                    <div class="phone-code">
+                        <input type="text" placeholder="手机验证码" />
+                        <button class="btn btn-info">获取短信验证码</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-change">修改</button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 绑定手机号 -->
+    <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel">绑定手机号</h5>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="text" placeholder="手机号" />
+                    </div>
+                    <div class="verification-code">
+                        <input type="text" placeholder="图形验证码" />
+                        <img src="Images/verification-code.png" />
+                    </div>
+                    <div class="phone-code">
+                        <input type="text" placeholder="手机验证码" />
+                        <button class="btn btn-info">获取短信验证码</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-change">绑定</button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/Site.js"></script>
+</body>
+</html>
