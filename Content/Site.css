@@ -219,7 +219,7 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 
 .modal-body > div { margin:14px 0; width: 100%; }
 
-.modal-body input[type='text'] { padding:0 12px; border-radius:0; box-shadow:none; border: 1px solid #cacaca; width: 100%; height: 39px; }
+.modal-body input[type='text'],.modal-body input[type='password'] { padding:0 12px; border-radius:0; box-shadow:none; border: 1px solid #cacaca; width: 100%; height: 39px; }
 
 .modal-body  > div.modal-alert { margin:0; line-height:45px; color:#3ebcd0; font-size:12px; }
 
