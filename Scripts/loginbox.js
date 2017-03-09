@@ -202,30 +202,37 @@ var isMobileRegistered = function(mobile, type) {
     });
 };
 
-// // 验证图片验证码是否正确
-// var verifyImgCode = function(imgCode) {
-//     jQuery.ajax({
-//         type: "post",
-//         url: "/user/verifyImgCode",
-//         data: {
-//             imgCode: imgCode
-//         },
-//         success: function(data) {
-//             if (data.code == 0) {
-//                 // 输入正确
-//                 $(".verify-img-code").removeClass("wrong").addClass("right").html("<i></i>");
-//                 $("#verifyImgCode").removeClass("wrong").addClass("right").attr("verification", "right");
-//             } else {
-//                 // 输入错误
-//                 $(".verify-img-code").removeClass("right").addClass("wrong").html("<i></i>"+data.msg);
-//                 $("#verifyImgCode").attr("verification", "wrong");
-//             }
-//         },
-//         error: function() {
-//             $.message.pop("服务器连接错误！", "warning");
-//         }
-//     });
-// };
+//检查刷新图片验证码
+var checkCertImg=function(div,img) {
+    var divStyle = div.attr("style")||"";
+    if (divStyle.search("display: block;")==-1) {
+        if (img.attr("src")) {
+            img.removeAttr("src");
+            img.removeAttr("data-verified");
+        }
+    }
+    else {
+        if (!img.attr("src")) {
+            img.attr("src", "/post/veri.jpg?ver=" + Math.random().toString());
+        }
+    }
+
+};
+
+// 验证图片验证码是否正确
+var verifyImgCode = function(imgCode, cb) {
+    jQuery.ajax({
+        type: "post",
+        url: "/post/verifyImgCode",
+        data: {
+            code: imgCode
+        },
+        success: cb,
+        error: function() {
+            $.message.pop("服务器连接错误！", "warning");
+        }
+    });
+};
 
 // 发送手机验证码
 var getMobileCode = function(mobile) {
@@ -537,25 +544,30 @@ $(function() {
         }
     });
 
-    // // 检测图片验证码是否通过
-    // $("#loginBoxWrap").on("keyup", "#verifyImgCode", function() {
-    //     var imgCode = $(this).val().trim();
-    //     if (imgCode.length == 5) {
-    //         verifyImgCode(imgCode);
-    //     }
-    // });
-    // $("#loginBoxWrap").on("blur", "#loginBoxModal #verifyImgCode", function() {
-    //     var imgCode = $(this).val().trim();
-    //     if (imgCode.length == 0) {
-    //         return false;
-    //     }
-    //     if (imgCode.length == 5) {
-    //         verifyImgCode(imgCode);
-    //     } else {
-    //         $(".verify-img-code").removeClass("right").addClass("wrong").html("<i></i>请输入正确的验证码！");
-    //         $(this).removeClass("right").addClass("wrong").attr("verification", "wrong");
-    //     }
-    // });
+    // 检测图片验证码是否通过
+    $("#loginBoxWrap").on("blur", "#loginBoxModal #verifyImgCode", function() {
+        var imgCode = $(this).val().trim();
+        if (imgCode.length == 0) {
+            return false;
+        }
+        if (imgCode.length == 5) {
+            verifyImgCode(imgCode,function(data){
+                if(data.code==0) {
+                    // 输入正确
+                    $(".verify-img-code").removeClass("wrong").addClass("right").html("<i></i>");
+                    $("#verifyImgCode").removeClass("wrong").addClass("right").attr("verification", "right");
+                }
+                else {
+                    // 输入错误
+                    $(".verify-img-code").removeClass("right").addClass("wrong").html("<i></i>"+data.msg);
+                    $("#verifyImgCode").attr("verification", "wrong");
+                }
+            });
+        } else {
+            $(".verify-img-code").removeClass("right").addClass("wrong").html("<i></i>请输入正确的验证码！");
+            $(this).removeClass("right").addClass("wrong").attr("verification", "wrong");
+        }
+    });
 
     $("#loginBoxWrap").on("blur", "#registerPwd", function() {
         // 判断密码
