@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 240203 */
-  src: url('http://at.alicdn.com/t/font_glf5azi0ppue4s4i.eot');
-  src: url('http://at.alicdn.com/t/font_glf5azi0ppue4s4i.eot?#iefix') format('embedded-opentype'),
-  url('http://at.alicdn.com/t/font_glf5azi0ppue4s4i.woff') format('woff'),
-  url('http://at.alicdn.com/t/font_glf5azi0ppue4s4i.ttf') format('truetype'),
-  url('http://at.alicdn.com/t/font_glf5azi0ppue4s4i.svg#iconfont') format('svg');
+  src: url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.eot');
+  src: url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.svg#iconfont') format('svg');
 }
 
 i { font-family:iconfont; font-style:normal }
@@ -240,3 +240,16 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 .phone-code .btn { position:absolute; border-radius:0; color:#fff; background:#41b9d1; width:190px; margin-left:-190px; height: 39px;  }
 
 /*end 模态框*/
+
+/*表格*/
+.table { margin-top:17px; border:1px solid #ededed;}
+.table > thead > tr > th { line-height:28px; font-size:16px; font-weight:normal; background-color: #f9f9f9; }
+.table-striped > tbody > tr:nth-of-type(2n) { background-color: #f9f9f9; }
+.table-striped > tbody > tr:nth-of-type(2n+1) { background-color: #fff; }
+.table > tbody > tr > td { line-height:20px; border-top:none }
+.table > thead > tr > th{border-bottom:none}
+.table > tbody tr > td > i { margin:0 15px 0 }
+.table > tbody tr > td.text-left{ padding-left:50px ; width:26%}
+.table > tbody tr > td > a { color:#3ebcd0; margin-right: 10px }
+.table > tbody tr > td > span.green { color:#3ebcd0; }
+/*end 表格*/
