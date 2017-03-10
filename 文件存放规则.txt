@@ -21,3 +21,4 @@
 		{
 		  "directory":"libs"
 		}
+	6、Libs／external：用来存放一些无法使用bower安装的第三方库，比如 jqBootstrapValidation，jquery.md5.js
