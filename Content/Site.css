@@ -266,3 +266,14 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 #btc_qrcode canvas{width:100%}
 .qrcode-border{ float:right; max-width:200px; margin:20px; background-color:#fff; border:1px solid #ededed; padding:10px; }
 /*end 充值页面*/
+
+/*提现页面*/
+.withdraw-note { font-size: 16px; color: #4a4a4a; letter-spacing: 1.33px; line-height: 45px; }
+.withdraw-note ol { padding-left: 30px; font-size: 15px; color: #1d9dbf; letter-spacing: 0; line-height: 45px; }
+.withdraw-assets .balance{ padding:0 15px; font-size:14px; line-height:30px; border:1px solid #cacaca; height:30px; margin:8px 0 0 -1px }
+.withdraw-assets .balance-value{color:#0a8bc5;}
+.withdraw-assets.edit select.form-control{  margin:8px 0 0 0; width:100%;}
+.edit .form-control.withdraw-input{width:100%}
+.withdraw-phone-code .btn { position: absolute; border-radius: 0; color: #fff; background: #41b9d1; width: 190px; height: 30px; right: 15px; margin-top: -30px; padding: 0; }
+
+/*end 提现页面*/
