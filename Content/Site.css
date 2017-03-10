@@ -253,3 +253,16 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 .table > tbody tr > td > a { color:#3ebcd0; margin-right: 10px }
 .table > tbody tr > td > span.green { color:#3ebcd0; }
 /*end 表格*/
+
+/*充值页面*/
+.recharge-div { margin-top:18px; background: #f9f9f9; border: 1px solid #ededed; }
+.recharge-div .col-md-8{ padding:53px 30px}
+.recharge-div .your-address { font-size: 16px; color: #4a4a4a; letter-spacing: 1.33px; line-height: 45px; text-align: left; }
+.recharge-div .btc-address { background: #ffffff; padding:0 20px; border: 1px solid #cacaca; height: 43px; font-size: 18px; color: #0a8bc5; letter-spacing: 1.33px; line-height: 45px; }
+.recharge-alert  { margin-top:18px; padding:75px 45px; line-height:45px; background: #f9f9f9; border: 1px solid #ededed; }
+.recharge-alert .auth-text{ font-size:15px; margin-top:0}
+.recharge-alert .auth-text a{ margin:0 2px; color:#f70e4b;}
+
+#btc_qrcode canvas{width:100%}
+.qrcode-border{ float:right; max-width:200px; margin:20px; background-color:#fff; border:1px solid #ededed; padding:10px; }
+/*end 充值页面*/

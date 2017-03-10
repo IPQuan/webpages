@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="Images/nav-logo.png" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><i>&#xe621;</i>首页</a></li>
+                    <li><a href="#"><i>&#xe607;</i>ICO</a></li>
+                    <li><a href="#"><i>&#xe666;</i>资讯</a></li>
+                    <li><a href="#"><i>&#xe619;</i>市值</a></li>
+                </ul>
+                <div class="navbar-right">
+                    <form class="navbar-form" action="search">
+                        <div class="form-group">
+                            <input name="s" type="text" class="form-control" placeholder="搜索ICO项目&用户">
+                            <button type="submit">
+                                <img src="Images/search.svg" />
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><i>&#xe615;</i>消息</a></li>
+                        <li><a href="#"><i>&#xe6a3;</i>注册|登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container fixed-width">
+        <div class="row">
+            <div class="col-xs-2 menu-left">
+                <div class="user-center-text">
+                    <i>&#xe6a3;</i><span>用户中心</span>
+                </div>
+                <div class="avatar">
+                    <img src="Images/avatar.png" />
+                </div>
+                <div class="user-name">
+                    波罗波波
+                </div>
+                <ul class="menu-list">
+                    <li>
+                        <i>&#xe629;</i><div>账户管理</div>
+                    </li>
+                    <li><a href="user_center.html">个人资料</a></li>
+                    <li><a href="certification.html">实名认证</a></li>
+                    <li><a href="security.html">安全中心</a></li>
+                </ul>
+                <ul class="menu-list">
+                    <li>
+                        <img src="Images/wallet.svg" /><div>资产管理</div>
+                    </li>
+                    <li>我的资产</li>
+                    <li>充值</li>
+                    <li>提现</li>
+                    <li>财务记录</li>
+                </ul>
+                <ul class="menu-list">
+                    <li>
+                        <i>&#xe63d;</i><div>项目管理</div>
+                    </li>
+                    <li>我的项目</li>
+                    <li>发起项目</li>
+                    <li>已投项目</li>
+                    <li>关注项目</li>
+                </ul>
+                <ul class="menu-list">
+                    <li>
+                        <i>&#xe615;</i><div>信息管理</div>
+                    </li>
+                    <li>我的资讯</li>
+                    <li>评论</li>
+                    <li>通知</li>
+                    <li>公告</li>
+                </ul>
+            </div>
+            <div class="col-xs-10 menu-right">
+                <section>
+                    <header>
+                        比特币充值<hr />
+                    </header>
+                    <div class="recharge-alert clearfix">
+                        <div class="auth-text">
+                            <i>&#xe679;</i>你还未进行<a href="javascript:">实名认证</a>，不能使用充值提现功能！
+                        </div>
+                        <div class="auth-text">
+                            <i>&#xe679;</i>你还未进行<a href="javascript:">安全认证</a>，不能使用充值提现功能，请前往<a href="javascript:">安全中心</a>进行设置！
+                        </div>
+                    </div>
+                    <div class="recharge-div clearfix">
+                        <div class="col-md-8">
+                            <div class="your-address">这是你的比特币钱包地址，请将你的比特币转入此地址：</div>
+                            <div class="btc-address">14gaanWo7JUZqWYuTmxikKPCosfn1yD3iM</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="qrcode-border">
+                                <div id="btc_qrcode"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                
+                <section>
+                    <header>
+                        充值记录<hr />
+                    </header>
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th class="text-center">名称</th>
+                                <th class="text-center">金额</th>
+                                <th class="text-center">时间</th>
+                                <th class="text-center">状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left"><i>&#xe61b;</i>比特币充值</td>
+                                <td>12.34121123</td>
+                                <td>2017/12/3</td>
+                                <td><a href="javascript:">确认中</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left"><i>&#xe61b;</i>比特币充值</td>
+                                <td>1500.32</td>
+                                <td>2017/5/2</td>
+                                <td><a href="javascript:">完成</a></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>  
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/Site.js"></script>
+    <!-- 新添加的二维码插件，bower里没找到 -->
+    <script src="libs/external/jquery.qrcode.min.js"></script>
+    <script>
+        $("#btc_qrcode").html("").qrcode("14gaanWo7JUZqWYuTmxikKPCosfn1yD3iM");
+    </script>
+</body>
+</html>
