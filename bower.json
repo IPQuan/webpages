@@ -1,0 +1,24 @@
+{
+  "name": "ipquan",
+  "homepage": "https://github.com/IPQuan/webpages",
+  "authors": [
+    "Woo-ing"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "swiper": "^3.4.1",
+    "jquery": "^3.1.1"
+  }
+}
