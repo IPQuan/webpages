@@ -9,6 +9,7 @@
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/responsive.css" rel="stylesheet" />
     <link href="Content/swiper.min.css" rel="stylesheet" />
+    <link href="Content/page.css" rel="stylesheet" />
     <link href="Content/ICO.css" rel="stylesheet" />
 </head>
 <body>
@@ -122,7 +123,7 @@
                     <div class="col-l-2" value="ico-detail5">项目更新<div class="activeLine"></div></div>
                 </div>
                 <div class="row ico-content">
-                    <div class="ico-detail1">
+                    <div class="ico-detail1 hide">
                         <div class="col-xs-12"><!--TODO 项目白皮书-->
                             富文本框1
                         </div>
@@ -132,7 +133,7 @@
                             富文本框2
                         </div>
                     </div>
-                    <div class="ico-detail3 hide">
+                    <div class="ico-detail3 hide"><!--TODO 团队与社区-->
                         <div class="t-detail-wrapper overflowAuto">
                             <div class="t-owner col-xs-12 text-center">
                                 <img src="Images/owner.png" />
@@ -195,11 +196,70 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico-detail4 hide">
-
+                    <div class="ico-detail4"><!--TODO 团队与社区-->
+                        <div class="comment-wrapper overflowAuto">
+                            <div class="col-xs-12 comment-title-wrapper text-center">
+                                <div class="comment-title">提问</div>
+                            </div>
+                            <div class="col-xs-12 comment-detail"><!--TODO Q&A-->
+                                <textarea placeholder="向项目团队提出你的问题吧！"></textarea>
+                                <div class="send-comment">
+                                    <a class="cancel">取消</a>
+                                    <a class="send">发送</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 comment-list">
+                            <div id="comment-list01">
+                                <div class="listWrapper">
+                                    <div class="sender">
+                                        <div class="comment-num">01</div>
+                                        <div class="comment-round">
+                                            白兰花：
+                                        </div>
+                                        <div class="comment-content">
+                                            看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。2.团队保留个-283个WIN，请问这两个数字怎么得出来的？
+                                            <div class="comment-date">
+                                                2016/12/5 11:01:58
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replier">
+                                        <div class="comment-round">444：&nbsp;</div>
+                                        <div class="comment-content">
+                                            <div class="comment-reply">
+                                                看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。看完项目说明比较晕，能否简要说明募集规则。个-283个WIN，请问这两个数字怎么得出来的？
+                                            </div>
+                                            <div class="comment-date">
+                                                2016/12/5 11:01:58
+                                                <i onclick="ready_to_edit(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
+                                            </div>
+                                            <div class="editComment">
+                                                <textarea onblur="finish_to_edit(this)" class="hide"></textarea>
+                                                <div class="send-comment">
+                                                    <a class="cancel">取消</a>
+                                                    <a class="send">发送</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="replier">-->
+                                        <!--<div class="comment-round">&nbsp;</div>-->
+                                        <!--<div class="comment-content">-->
+                                            <!--<textarea onblur="finish_to_edit(this)"></textarea>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div id="page"></div>
+                        </div>
                     </div>
-                    <div class="ico-detail5 hide">
-
+                    <div class="ico-detail5 hide"><!--TODO 项目更新-->
+                        <div class="col-xs-12">
+                            富文本框5:项目更新
+                        </div>
                     </div>
                 </div>
             </div>
@@ -273,6 +333,22 @@
 <script src="Scripts/jquery-3.1.1.min.js"></script>
 <script src="Scripts/bootstrap.min.js"></script>
 <script src="Scripts/swiper.min.js"></script>
+<script src="Scripts/page-query.js"></script>
+<script src="Scripts/page.js"></script>
 <script src="Scripts/ICO.js"></script>
+<script>
+    $('#page').Paging({pagesize:10,count:28,callback:function(page,size,count){//pagesize:一页显示几个,count:一共多少个
+        <!--TODO 替换当前评论页内容 -->
+        console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
+    }});
+    $(function ()
+    {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    function ready_to_edit(obj) {
+        $(obj).parent().parent().find("textarea").html($(obj).parent().find(".comment-reply").html()).removeClass('hide').focus();
+//        $(obj).parent().find("textarea").focus();
+    }
+</script>
 </body>
 </html>

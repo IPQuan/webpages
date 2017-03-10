@@ -166,16 +166,60 @@ body{
 .ico-progress .row .col-xs-12 > div{
     line-height:31px;
 }
-.ico-progress .row .col-xs-12.lastOne >div{
-    line-height:62px;
-    font-size:24px;
-    letter-spacing: 4px;
-}
 .ico-progress .floatRight{
     color:#0a8bc5;
 }
-.ico-progress .row .col-xs-12.lastOne >div .floatRight{
-    color:#1d9dbf;
+.remainM{
+    width: 274px;
+    border: 2px solid #3ebcd0;
+    border-radius: 10px;
+    height: 60px;
+    overflow-y:hidden;
+}
+.remainM .mLeft{
+    float: left;
+    width: 135px;
+    text-align: center;
+}
+.remainM .mLeft div{
+    font-size: 22px;
+    color: #4a4a4a;
+    letter-spacing: 3.67px;
+    text-align: center;
+    line-height: 30px;
+    margin: 1px 0 -5px 0;
+}
+.remainM .mLeft span{
+    font-size: 22px;
+    color: #1d9dbf;
+    letter-spacing: 0;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+}
+.remainM .mRight{
+    background: #3ebcd0;
+    width: 135px;
+    height: 60px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: 58px;
+    text-align: center;
+    position: relative;
+}
+.remainM .mRight i{
+    font-size:26px;
+    position: absolute;
+    right: 5px;
+}
+.remainM .mRight span{
+    margin-left:-12px;
+}
+.remainM .mRight a,.remainM .mRight a:hover,.remainM .mRight a:focus{
+    color: #fff;
+    cursor: pointer;
 }
 .barWrapper{
     margin-top:45px;
@@ -429,6 +473,140 @@ i.qq.active{
 .disabled>i{
     color: #ededed!important;
 }
+.comment-title{
+    background:#3ebcd0;
+    width:95px;
+    height:95px;
+    border-radius:100%;
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0;
+    line-height:95px;
+    text-align: center;
+}
+.comment-detail textarea,.comment-list textarea{
+    width:100%;
+    height:120px;
+    outline: none;
+    border:1px solid #D1D1D1;
+    padding:6px 12px;
+    color: #333;
+}
+.comment-detail textarea::-webkit-input-placeholder,.comment-detail textarea::-moz-placeholder,.comment-detail textarea:-ms-input-placeholder{
+    color:#D1D1D1;
+}
+.send-comment{
+    text-align: right;
+    margin-top:5px;
+}
+.cancel{
+    display: inline-block;
+    border:1px solid #3ebcd0;
+    border-radius:3px;
+    width:58px;
+    height:24px;
+    font-size:14px;
+    color:#4a4a4a;
+    letter-spacing:1px;
+    line-height:23px;
+    text-align:center;
+    margin-right:4px;
+    cursor: pointer;
+}
+.send{
+    display: inline-block;
+    background:#3ebcd0;
+    border-radius:3px;
+    width:60px;
+    height:24px;
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:1px;
+    line-height:24px;
+    text-align:center;
+    cursor: pointer;
+}
+a.send:hover,a.send:focus{
+    color:#fff;
+}
+.comment-round{
+    float: left;
+    width: 160px;
+    font-size:18px;
+    color:#0a8bc5;
+    letter-spacing:0;
+    line-height:30px;
+    position: relative;
+    left:56px;
+}
+.comment-round::before{
+    content:'';
+    background:#3ebcd0;
+    width:5px;
+    height:5px;
+    border-radius:5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -2.5px;
+    left: -11px;
+}
+.comment-content{
+    float:left;
+    width:calc(100% - 160px);
+    margin-bottom:10px;
+}
+.comment-list>div{
+    margin:20px 0;
+}
+.sender{
+    font-size:16px;
+    color:#000000;
+    letter-spacing:0;
+    line-height:30px;
+    overflow-y: hidden;
+    position: relative;
+}
+.sender:before{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: #3ebcd0;
+    position: absolute;
+    left: 47px;
+    top: 30px;
+}
+.replier{
+    font-size:16px;
+    color:#4a4a4a;
+    letter-spacing:0;
+    line-height:30px;
+    overflow: auto;
+}
+.comment-date{
+    font-size:14px;
+    color:#0a8bc5;
+    letter-spacing:2.33px;
+    text-align:left;
+    line-height: 20px;
+}
+.comment-num{
+    position: absolute;
+    background: #3ebcd0;
+    border-radius: 3px;
+    width: 37px;
+    height: 20px;
+    left: 0;
+    top: 50%;
+    margin-top:5px;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+}
+.listWrapper i{
+    cursor: pointer;
+}
 @media all and (min-width: 768px) {
     .col-l-2{
         float:left;
@@ -456,25 +634,30 @@ i.qq.active{
     .t-detail{
         width:calc(100% - 270px);
     }
+    .comment-title-wrapper{
+        width:215px;
+        padding: 13px 60px!important;
+    }
+    .comment-detail{
+        width:calc(100% - 215px);
+        padding-left:0!important;
+    }
     .ico-progress .firstOne{
         padding:0 0 0 60px;
     }
     .ico-progress .secondOne{
         padding: 0 55px 0 65px;
     }
-    .ico-progress .lastOne{
-        padding: 0 60px 0 0;
-    }
     .ico-detail .ico-title{
         padding:45px 35px 0;
+    }
+    .remainM{
+        margin: 0 auto;
     }
 }
 @media all and (min-width:1200px) {
     .ico-progress .firstOne{
         padding:0 60px 0 60px;
-    }
-    .ico-progress .lastOne{
-        padding: 0 60px 0 40px;
     }
     .ico-detail .ico-title{
         padding:45px 10px 0;
@@ -489,5 +672,7 @@ i.qq.active{
     .ico-content .col-xs-12{
         padding:0 15px!important;
     }
-
+    .remainM{
+        margin:20px auto 0 auto;
+    }
 }

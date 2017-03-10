@@ -110,8 +110,16 @@
                         <div>参与人数：<div class="floatRight">100人</div></div>
                         <div>剩余时间：<div class="floatRight">10天</div></div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 lastOne">
-                        <div>已筹金额：<div class="floatRight">350BTC</div></div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 lastOne">
+                        <div class="remainM">
+                            <div class="mLeft">
+                                <div>已筹金额</div>
+                                <span>350.1234</span>
+                            </div>
+                            <div class="mRight">
+                                <a><span>参与ICO</span><i>&#xe604;</i></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-12 barWrapper">
                         <div class="barContentWrapper">
@@ -314,6 +322,12 @@
 <script src="Scripts/jquery-3.1.1.min.js"></script>
 <script src="Scripts/bootstrap.min.js"></script>
 <script src="Scripts/swiper.min.js"></script>
+<script>
+    var bannerSwiper = new Swiper('#bannerSwiper', {
+        pagination: '.swiper-pagination1',
+        paginationClickable: true
+    });
+</script>
 <script src="Scripts/ICO.js"></script>
 </body>
 </html>
