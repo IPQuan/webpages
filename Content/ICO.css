@@ -532,12 +532,14 @@ a.send:hover,a.send:focus{
 .comment-round{
     float: left;
     width: 160px;
-    font-size:18px;
-    color:#0a8bc5;
-    letter-spacing:0;
-    line-height:30px;
+    font-size: 18px;
+    color: #0a8bc5;
+    letter-spacing: 0;
+    line-height: 30px;
     position: relative;
-    left:56px;
+    padding-left: 56px;
+    height: 30px;
+    overflow-y: hidden;
 }
 .comment-round::before{
     content:'';
@@ -548,12 +550,11 @@ a.send:hover,a.send:focus{
     position: absolute;
     top: 50%;
     margin-top: -2.5px;
-    left: -11px;
+    left: 45px;
 }
 .comment-content{
     float:left;
     width:calc(100% - 160px);
-    margin-bottom:10px;
 }
 .comment-list>div{
     margin:20px 0;
@@ -565,6 +566,7 @@ a.send:hover,a.send:focus{
     line-height:30px;
     overflow-y: hidden;
     position: relative;
+    padding-bottom:10px;
 }
 .sender:before{
     content: '';
@@ -581,6 +583,10 @@ a.send:hover,a.send:focus{
     letter-spacing:0;
     line-height:30px;
     overflow: auto;
+    margin-bottom:10px;
+}
+.comment-wrapper{
+    padding-bottom:10px;
 }
 .comment-date{
     font-size:14px;
@@ -606,6 +612,26 @@ a.send:hover,a.send:focus{
 }
 .listWrapper i{
     cursor: pointer;
+}
+.delete-wrapper{
+    width: 60px;
+    height: 20px;
+    line-height: 16px;
+    position: absolute;
+    left: 68px;
+    top: 50%;
+    margin-top: 5px;
+}
+.comment-delete img{
+    width: 20px;
+    cursor: pointer;
+}
+#page{
+    margin-top:25px;
+    padding-left: 130px;
+}
+#page ul{
+    -webkit-padding-start:0;
 }
 @media all and (min-width: 768px) {
     .col-l-2{
@@ -674,5 +700,11 @@ a.send:hover,a.send:focus{
     }
     .remainM{
         margin:20px auto 0 auto;
+    }
+}
+@media all and (max-width:767px){
+    #page{
+        padding-left: 0;
+        margin-left:-12.5px;
     }
 }

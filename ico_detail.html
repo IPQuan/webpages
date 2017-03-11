@@ -8,8 +8,8 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/responsive.css" rel="stylesheet" />
-    <link href="Content/swiper.min.css" rel="stylesheet" />
-    <link href="Content/page.css" rel="stylesheet" />
+    <link href="libs/swiper/dist/css/swiper.min.css" rel="stylesheet" />
+    <link href="libs/external/page/page.css" rel="stylesheet" />
     <link href="Content/ICO.css" rel="stylesheet" />
 </head>
 <body>
@@ -123,7 +123,7 @@
                     <div class="col-l-2" value="ico-detail5">项目更新<div class="activeLine"></div></div>
                 </div>
                 <div class="row ico-content">
-                    <div class="ico-detail1 hide">
+                    <div class="ico-detail1">
                         <div class="col-xs-12"><!--TODO 项目白皮书-->
                             富文本框1
                         </div>
@@ -196,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ico-detail4"><!--TODO 团队与社区-->
+                    <div class="ico-detail4 hide"><!--TODO 团队与社区-->
                         <div class="comment-wrapper overflowAuto">
                             <div class="col-xs-12 comment-title-wrapper text-center">
                                 <div class="comment-title">提问</div>
@@ -204,8 +204,8 @@
                             <div class="col-xs-12 comment-detail"><!--TODO Q&A-->
                                 <textarea placeholder="向项目团队提出你的问题吧！"></textarea>
                                 <div class="send-comment">
-                                    <a class="cancel">取消</a>
-                                    <a class="send">发送</a>
+                                    <a class="cancel" onclick="to_cancel()">取消</a>
+                                    <a class="send" onclick="to_send(this)">发送</a>
                                 </div>
                             </div>
                         </div>
@@ -214,41 +214,98 @@
                                 <div class="listWrapper">
                                     <div class="sender">
                                         <div class="comment-num">01</div>
+                                        <div class="comment-delete">
+                                            <div class="delete-wrapper">
+                                                <img src="Images/delete.svg" onclick="to_delete(this)" value="01" data-toggle="tooltip" data-placement="top" title="删除" />
+                                            </div>
+                                        </div>
                                         <div class="comment-round">
-                                            白兰花：
+                                            白兰花：&nbsp;
                                         </div>
                                         <div class="comment-content">
-                                            看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。2.团队保留个-283个WIN，请问这两个数字怎么得出来的？
+                                            <div class="comment-reply">
+                                                这是一个人的评价
+                                            </div>
                                             <div class="comment-date">
-                                                2016/12/5 11:01:58
+                                                <span class="dateH">2016/12/5 11:01:58</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="replier">
-                                        <div class="comment-round">444：&nbsp;</div>
-                                        <div class="comment-content">
-                                            <div class="comment-reply">
-                                                看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。看完项目说明比较晕，能否简要说明募集规则。个-283个WIN，请问这两个数字怎么得出来的？
-                                            </div>
-                                            <div class="comment-date">
-                                                2016/12/5 11:01:58
-                                                <i onclick="ready_to_edit(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
-                                            </div>
-                                            <div class="editComment">
-                                                <textarea onblur="finish_to_edit(this)" class="hide"></textarea>
-                                                <div class="send-comment">
-                                                    <a class="cancel">取消</a>
-                                                    <a class="send">发送</a>
+                                        <div class="editCommentWrapper">
+                                            <div class="comment-round">晓物物：&nbsp;</div>
+                                            <div class="comment-content">
+                                                <div class="comment-reply">
+                                                    看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。看完项目说明比较晕，能否简要说明募集规则。个-283个WIN，请问这两个数字怎么得出来的？
+                                                </div>
+                                                <div class="comment-date">
+                                                    <span class="dateH">2016/12/5 11:01:58</span>
+                                                    <i onclick="to_edit(this)" value="01" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
+                                                </div>
+                                                <div class="editComment hide">
+                                                    <textarea></textarea>
+                                                    <div class="send-comment">
+                                                        <a class="cancel" value="01" onclick="to_cancel_send(this)">取消</a>
+                                                        <a class="send" value="01" onclick="to_edit_send(this)">发送</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--<div class="replier">-->
-                                        <!--<div class="comment-round">&nbsp;</div>-->
-                                        <!--<div class="comment-content">-->
-                                            <!--<textarea onblur="finish_to_edit(this)"></textarea>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
+                                </div>
+                            </div>
+                            <div id="comment-list02">
+                                <div class="listWrapper">
+                                    <div class="sender">
+                                        <div class="comment-num">02</div>
+                                        <div class="comment-delete">
+                                            <div class="delete-wrapper">
+                                                <img src="Images/delete.svg" onclick="to_delete(this)" value="02" data-toggle="tooltip" data-placement="top" title="删除" />
+                                            </div>
+                                        </div>
+                                        <div class="comment-round">
+                                            白兰花：&nbsp;
+                                        </div>
+                                        <div class="comment-content">
+                                            <div class="comment-reply">
+                                                看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。2.团队保留个-283个WIN，请问这两个数字怎么得出来的？
+                                            </div>
+                                            <div class="comment-date">
+                                                <span class="dateH">2016/12/5 11:01:58</span>
+                                                <i onclick="to_reply(this)" value="02" data-toggle="tooltip" data-placement="top" title="回复">&#xe61c;</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replier">
+                                        <div class="replyComment hide"><!--回复-->
+                                            <div class="comment-round">&nbsp;</div>
+                                            <div class="comment-content">
+                                                <textarea></textarea>
+                                                <div class="send-comment">
+                                                    <a class="cancel" value="02" onclick="to_reply_cancel(this)">取消</a>
+                                                    <a class="send" value="02" onclick="to_reply_send(this)">发送</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="editCommentWrapper hide">
+                                            <div class="comment-round">&nbsp;</div>
+                                            <div class="comment-content">
+                                                <div class="comment-reply">
+                                                </div>
+                                                <div class="comment-date">
+                                                    <span class="dateH"></span>
+                                                    <i onclick="to_edit(this)" value="02" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
+                                                </div>
+                                                <div class="editComment hide">
+                                                    <textarea></textarea>
+                                                    <div class="send-comment">
+                                                        <a class="cancel" value="02" onclick="to_cancel_send(this)">取消</a>
+                                                        <a class="send" value="02" onclick="to_edit_send(this)">发送</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -332,22 +389,88 @@
 
 <script src="Scripts/jquery-3.1.1.min.js"></script>
 <script src="Scripts/bootstrap.min.js"></script>
-<script src="Scripts/swiper.min.js"></script>
-<script src="Scripts/page-query.js"></script>
-<script src="Scripts/page.js"></script>
+<script src="libs/swiper/dist/js/swiper.min.js"></script>
+<script src="libs/external/page/page-query.js"></script>
+<script src="libs/external/page/page.js"></script>
 <script src="Scripts/ICO.js"></script>
 <script>
     $('#page').Paging({pagesize:10,count:28,callback:function(page,size,count){//pagesize:一页显示几个,count:一共多少个
-        <!--TODO 替换当前评论页内容 -->
+        <!--TODO 评论分页,刷新评论页内容-->
         console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
     }});
     $(function ()
     {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-    function ready_to_edit(obj) {
-        $(obj).parent().parent().find("textarea").html($(obj).parent().find(".comment-reply").html()).removeClass('hide').focus();
-//        $(obj).parent().find("textarea").focus();
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    function to_send(obj){<!--TODO ID命名规则-->
+        var id = $('.comment-list>div').length+1;
+        if(id<10){
+            id='0'+id;
+        }
+        var obj = {
+          newId : id,
+          user:'晓物物',
+          content:$('.comment-detail textarea').val().trim(),
+          date:getDate()
+        };
+        $('.comment-list').prepend('<div id="comment-list'+obj.newId+'"> <div class="listWrapper"> <div class="sender"> <div class="comment-num">'+obj.newId+'</div> <div class="comment-delete"> <div class="delete-wrapper"> <img src="Images/delete.svg" onclick="to_delete(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="删除" /> </div> </div><div class="comment-round">'+obj.user+'：&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> '+obj.content+' </div> <div class="comment-date"> <span class="dateH">'+obj.date+'</span> <i onclick="to_reply(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="回复">&#xe61c;</i> </div> </div> </div> ' +
+                '<div class="replier"> <div class="replyComment hide"><!--回复--> <div class="comment-round">&nbsp;</div> <div class="comment-content"> <textarea></textarea> <div class="send-comment"> <a class="cancel" value="'+obj.newId+'" onclick="to_reply_cancel(this)">取消</a> <a class="send" value="'+obj.newId+'" onclick="to_reply_send(this)">发送</a> </div> </div> </div> <div class="editCommentWrapper hide"> <div class="comment-round">&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> </div> <div class="comment-date"> <span class="dateH"></span> <i onclick="to_edit(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i> </div> <div class="editComment hide"> <textarea></textarea> <div class="send-comment"> <a class="cancel" value="'+obj.newId+'" onclick="to_cancel_send(this)">取消</a> <a class="send" value="'+obj.newId+'" onclick="to_edit_send(this)">发送</a> </div> </div> </div> </div> </div> </div> </div>');
+        $(".comment-detail textarea").val('');
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    function to_cancel(){
+        $(".comment-detail textarea").val('');
+    }
+    function to_edit(obj) {<!--TODO value 和其最上层comment-list的id最后几位数字对应-->
+        var id = $(obj).attr('value');
+        $('#comment-list'+id+ ' .replier .editComment').removeClass('hide').find('textarea').val($('#comment-list'+id+ ' .replier .comment-reply').html().trim()).focus();
+    }
+    function to_edit_send(obj){
+        var id = $(obj).attr('value');
+        var text = $('#comment-list'+id+ ' .editComment textarea').val();
+        $('#comment-list'+id+ ' .replier .comment-reply').html(text);
+        $('#comment-list'+id+ ' .editComment textarea').html('');
+        $('.editComment').addClass('hide');
+        $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
+    }
+    function to_cancel_send(obj){
+        var id = $(obj).attr('value');
+        $('#comment-list'+id+ ' .replier .editComment').addClass('hide').find('textarea').html($('#comment-list'+id+ ' .replier .comment-reply').html().trim()).focus();
+    }
+    function to_reply(obj){
+        var id = $(obj).attr('value');
+        $('#comment-list'+id+ ' .replyComment').removeClass('hide');
+        $('#comment-list'+id+ ' .replyComment textarea').focus();
+    }
+    function to_reply_send(obj){
+        var id = $(obj).attr('value');
+        var text = $('#comment-list'+id+' .replyComment textarea').val();
+        $('#comment-list'+id+ ' .editCommentWrapper .comment-reply').html(text);
+        $('#comment-list'+id+ ' .replyComment').addClass('hide');
+        $('#comment-list'+id+ ' .editCommentWrapper').removeClass('hide');
+        $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
+        $('#comment-list'+id+ ' .editCommentWrapper .comment-round').html('晓物物：');<!--TODO 作者的用户名-->
+        $('#comment-list'+id+ ' .sender').find('i').remove();
+    }
+    function to_reply_cancel(obj){
+        var id = $(obj).attr('value');
+        $('#comment-list'+id+' .replyComment textarea').val('');
+        $('#comment-list'+id+ ' .replyComment').addClass('hide');
+    }
+    function to_delete(obj){
+        var id = $(obj).attr('value');
+        $('#comment-list'+id).remove();
+    }
+    function getDate(){
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth()+1;
+        var date = myDate.getDate();
+        var hour = myDate.getHours();
+        var min = myDate.getMinutes();
+        var second = myDate.getSeconds();
+        var time = year+'/'+month+'/'+date+' '+hour+':'+min+':'+second;
+        return time;
     }
 </script>
 </body>
