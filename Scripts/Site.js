@@ -19,30 +19,4 @@ function finish_to_edit(obj)
 $(function ()
 {
     $('[data-toggle="tooltip"]').tooltip()
-})
-$("#fileupload1").fileinput({
-    language: 'zh',
-    showUpload: false, //是否显示上传按钮
-    allowedFileExtensions: ['jpg', 'png', 'gif'],//接收的文件后缀
 });
-$("#fileupload2").fileinput({
-    language: 'zh',
-    showUpload: false, //是否显示上传按钮
-    allowedFileExtensions: ['jpg', 'png', 'gif'],//接收的文件后缀
-});
-
-function fileupload1_change()
-{
-    setTimeout(function ()
-    {
-        $(".cert-upload1").attr("src", $("#fileupload_div1").find("img").attr("src"));
-    }, 100);
-}
-
-function fileupload2_change()
-{
-    setTimeout(function ()
-    {
-        $(".cert-upload2").attr("src", $("#fileupload_div2").find("img").attr("src"));
-    }, 100);
-}
