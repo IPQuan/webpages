@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/responsive.css" rel="stylesheet" />
+    <link href="libs/cropper/cropper.min.css" rel="stylesheet" />
+    <link href="libs/external/avatar/avatar.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 menu-left">
+            <div id="crop-avatar">
+                <div class="avatar">
+                    <!--title="添加头像"-->
+                    <div class="avatar-view" ><!--TODO image 已经设定,则显示;image url未设置,class设为HIDE-->
+                        <!--<img src="Images/avatar.png"/>-->
+                        <img src="" class="hide"/>
+                        <i onclick="clickAvatar();" data-toggle="tooltip" data-placement="top" title="添加头像">&#xe618;</i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <form class="avatar-form" action="" enctype="multipart/form-data" method="post">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" >头像设置</h5>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-body">
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden">
+                            <!--<label for="avatarInput">图片上传</label>-->
+                            <input class="avatar-input hide" id="avatarInput" name="avatar_file" type="file"></div>
+                        <div class="row">
+                            <div class="col-left">
+                                <div class="avatar-wrapper">
+                                    <div class="chooseImg" onclick="changeAvater()"><i>&#xe618;</i>选择图片</div>
+                                </div>
+                            </div>
+                            <div class="col-right">
+                                <div class="rightWrapper">
+                                    <div class="preview-title">预览</div>
+                                    <div class="avatar-preview preview-custom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row avatar-btns">
+                            <div class="col-left">
+                                <button class="btn" onclick="changeAvater()" id="reSend" type="button">重新上传</button>
+                                <button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i>&#xe69d;</i>90度旋转</button>
+                            </div>
+                        </div>
+                        <div class="row submit-buttons">
+                            <button class="btn avatar-save" type="submit">确定</button>
+                            <button class="btn" onclick="cancel_change();" type="button">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+<script>
+
+</script>
+<script src="Scripts/jquery-3.1.1.min.js"></script>
+<script src="libs/cropper/cropper.min.js"></script>
+<script src="libs/external/avatar/avatar.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/Site.js"></script>
+<script>
+    function clickAvatar(){
+        $('.avatar-view img').click();
+        $('.tooltip').css('display','none');
+    }
+    function changeAvater(){
+        $("#avatarInput").click();
+    }
+    function cancel_change(){
+        $("#avatar-modal .close").click();
+    }
+    $(function(){
+        if($(".avatar-view img").attr('src')==''){
+            $("#reSend").addClass('hide');
+        }
+        $("#avatarInput").on('change',function(){
+            $("#reSend").removeClass('hide');
+        })
+    })
+</script>
+</body>
+</html>
