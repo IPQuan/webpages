@@ -39,9 +39,9 @@ var modalDom = function(type) {
     addHtml += '<div class="holder">';
     addHtml += '<div class="with-line">用第三方帐号注册IP圈</div>';
     addHtml += '<div class="buttons">';
-    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="user/auth/weibo" rel="nofollow"></a>';
-    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="user/auth/qq" rel="nofollow"></a>';
-    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="user/auth/wx" rel="nofollow"></a>';
+    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"></a>';
+    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"></a>';
+    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"></a>';
     addHtml += '</div>';
     addHtml += '<a class="switch-mobile-signup brown-link">使用手机号注册</a>';
     addHtml += '</div>';
@@ -56,9 +56,9 @@ var modalDom = function(type) {
     addHtml += '<div class="holder">';
     addHtml += '<div class="with-line">使用第三方帐号登录</div>';
     addHtml += '<div class="buttons">';
-    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="user/auth/weibo" rel="nofollow"></a>';
-    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="user/auth/qq" rel="nofollow"></a>';
-    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="user/auth/wx" rel="nofollow"></a>';
+    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"></a>';
+    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"></a>';
+    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"></a>';
     addHtml += '</div>';
     addHtml += '<div class="with-line">使用手机号登录</div>';
     addHtml += '<form>';
@@ -82,22 +82,26 @@ var modalDom = function(type) {
     addHtml += '<div class="holder">';
     addHtml += '<div class="with-line">重设密码</div>';
     addHtml += '<form class="reset-form" class="form-horizontal" id="resetForm" autocomplete="off">';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
     addHtml += '<input class="form-control" id="resetMobile" name="mobile" type="text" placeholder="手机号" autocomplete="off">';
     addHtml += '<span class="verify-result verify-mobile"></span>';
     addHtml += '</div>';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
     addHtml += '<input class="form-control" id="resetPwd" type="password" name="password" placeholder="密码" autocomplete="off">';
     addHtml += '<span class="verify-result verify-password"></span>';
     addHtml += '</div>';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
     addHtml += '<input class="form-control" id="resetPwdCheck" type="password" name="repassword" placeholder="确认密码" required="" autocomplete="off">';
     addHtml += '<span class="verify-result verify-resetPwdCheck"></span>';
     addHtml += '</div>';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
+    addHtml += '<div class="input-group">';
     addHtml += '<input class="verify-code form-control" id="resetVerifyMobileCode" name="code" type="text" placeholder="手机验证码" required="">';
-    addHtml += '<input class="verify-code-send form-control" id="resetVerifyMobileCodeSend" type="button" value="获取验证码">';
+    addHtml += '<span class="input-group-btn">';
+    addHtml += '<input class="btn btn-default" id="resetVerifyMobileCodeSend" type="button" value="获取验证码">';
+    addHtml += '</span>';
     addHtml += '<span class="verify-result verify-mobile-code"></span>';
+    addHtml += '</div>';
     addHtml += '</div>';
     addHtml += '<button class="btn btn-primary block full-width m-b" id="resetPasswordButton" type="button">重设密码</button>';
     addHtml += '</form>';
@@ -116,15 +120,15 @@ var modalDom = function(type) {
     addHtml += '<div class="holder">';
     addHtml += '<div class="with-line">使用手机注册</div>';
     addHtml += '<form autocomplete="off" id="registerForm">';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
     addHtml += '<input class="form-control" id="registerMobile" type="text" placeholder="手机号" required="" autocomplete="off">';
     addHtml += '<span class="verify-result verify-mobile"></span>';
     addHtml += '</div>';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
     addHtml += '<input class="form-control" id="registerPwd" type="password" name="password" placeholder="密码" required="" autocomplete="off">';
     addHtml += '<span class="verify-result verify-password"></span>';
     addHtml += '</div>';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
     addHtml += '<input class="form-control" id="passwordCheck" type="password" name="repassword" placeholder="确认密码" required="" autocomplete="off">';
     addHtml += '<span class="verify-result verify-passwordCheck"></span>';
     addHtml += '</div>';
@@ -135,10 +139,14 @@ var modalDom = function(type) {
     //addHtml += '</div>';
     //addHtml += '<span class="verify-result verify-img-code"></span>';
     //addHtml += '</div>';
-    addHtml += '<div class="form-group clearfix relative">';
+    addHtml += '<div class="form-group relative">';
+    addHtml += '<div class="input-group">';
     addHtml += '<input class="verify-code form-control" id="verifyMobileCode" type="text" name="code" placeholder="手机验证码" required="">';
-    addHtml += '<input class="verify-code-send form-control" id="verifyMobileCodeSend" type="button" value="获取验证码">';
+    addHtml += '<span class="input-group-btn">';
+    addHtml += '<input class="btn btn-default" id="verifyMobileCodeSend" type="button" value="获取验证码">';
+    addHtml += '</span>';
     addHtml += '<span class="verify-result verify-mobile-code"></span>';
+    addHtml += '</div>';
     addHtml += '</div>';
     addHtml += '<button class="btn btn-primary block full-width m-b" id="registerButton" type="button">注 册</button>';
     addHtml += '</form>';
@@ -354,7 +362,7 @@ var registerWithMobile = function(mobile, password, code) {
                     }, 400);
                 }, 1000);
             } else {
-                $.message.pop(data.msg, "warning");
+                $.message.pop(data.msg, data.type);
             }
         },
         error : function() {
@@ -391,7 +399,7 @@ var resetPassword = function(mobile, password, code) {
                     $("#resetVerifyMobileCode").val("");
                 }, 1000);
             } else {
-                $.message.pop(data.msg, "warning");
+                $.message.pop(data.msg, data.type);
             }
         },
         error : function() {
@@ -442,7 +450,7 @@ $(function() {
                     localStorage.setItem("ipquanRemember", ipquanRemember);
                     window.location.reload();
                 } else {
-                    $.message.pop(data.msg,"warning");
+                    $.message.pop(data.msg,data.type);
                 }
             },
             error: function() {

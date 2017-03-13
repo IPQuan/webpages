@@ -123,7 +123,7 @@ button.close{
 }
 
 .form-group input {
-  height: 40px;
+  height: 39px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -646,7 +646,6 @@ button.close{
 }
 #login_frame .reset .reset-form .btn {
   display: block;
-  height: 36px;
   margin-bottom: 14px;
 }
 #login_frame .reset .clear-input {
