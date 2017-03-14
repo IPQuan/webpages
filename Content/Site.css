@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 240203 */
-  src: url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.eot');
-  src: url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.eot?#iefix') format('embedded-opentype'),
-  url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.woff') format('woff'),
-  url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.ttf') format('truetype'),
-  url('http://at.alicdn.com/t/font_3p9qprevtr8dunmi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.eot');
+  src: url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.svg#iconfont') format('svg');
 }
 
 i { font-family:iconfont; font-style:normal }
