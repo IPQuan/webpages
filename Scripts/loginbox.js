@@ -27,7 +27,7 @@ var modalDom = function(type) {
     addHtml += '<div class="modal-content animated fadeIn">';
     addHtml += '<div class="modal-body">';
     addHtml += '<div id="login_frame" >';
-    addHtml += '<img class="logo" src="/images/LOGO108.png" width="150" height="35">';
+    addHtml += '<div id="topM"><img class="logo" src="Images/logo-login.png" width="200"></div>';
 
     // 注册
     if (type == "register") {
@@ -37,15 +37,15 @@ var modalDom = function(type) {
     }
 
     addHtml += '<div class="holder">';
-    addHtml += '<div class="with-line">用第三方帐号注册IP圈</div>';
+    addHtml += '<div class="with-line with-line3">用第三方帐号注册IP圈</div>';
     addHtml += '<div class="buttons">';
-    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"></a>';
-    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"></a>';
-    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"></a>';
+    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"><i>&#xe73d;</i></a>';
+    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"><i>&#xe73c;</i></a>';
+    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"><i>&#xe740;</i></a>';
     addHtml += '</div>';
-    addHtml += '<a class="switch-mobile-signup brown-link">使用手机号注册</a>';
+    addHtml += '<a class="switch-mobile-signup brown-link">使用手机号注册»</a><div class="lineHr"></div>';
     addHtml += '</div>';
-    addHtml += '<div class="switch">已有帐号？<a class="brown-link">登录到IP圈</a></div>';
+    addHtml += '<div class="switch">已有帐号？<a class="brown-link">登录到IP圈»</a></div>';
     addHtml += '</div>';
     // 登录
     if (type == "login") {
@@ -56,23 +56,23 @@ var modalDom = function(type) {
     addHtml += '<div class="holder">';
     addHtml += '<div class="with-line">使用第三方帐号登录</div>';
     addHtml += '<div class="buttons">';
-    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"></a>';
-    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"></a>';
-    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"></a>';
+    addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"><i>&#xe73d;</i></a>';
+    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"><i>&#xe73c;</i></a>';
+    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"><i>&#xe740;</i></a>';
     addHtml += '</div>';
-    addHtml += '<div class="with-line">使用手机号登录</div>';
+    addHtml += '<div class="with-line2">使用手机号登录</div>';
     addHtml += '<form>';
     addHtml += '<div class="form-group">';
-    addHtml += '<input class="form-control" id="qxUid" type="text" placeholder="手机号" required="">';
+    addHtml += '<input class="form-control" id="qxUid" type="text" placeholder="手机号码" required="">';
     addHtml += '</div>';
     addHtml += '<div class="form-group">';
     addHtml += '<div class="form-group">';
     addHtml += '<input class="form-control" id="qxPwd" type="password" placeholder="密码" required="">';
     addHtml += '</div>';
-    addHtml += '<button class="btn btn-primary full-width" id="loginButton" type="button">登 录</button>';
+    addHtml += '<button class="btn btn-primary full-width" id="loginButton" type="button">登录</button>';
     addHtml += '</form>';
     addHtml += '<a class="reset-password red-link">忘记密码»</a>';
-    addHtml += '<div class="switch-back">还没有注册？<a class="signup red-link">点击注册»</a></div>';
+    addHtml += '<div class="switch-back">还没有IP圈账号？<a class="signup red-link">点击注册»</a></div>';
     addHtml += '</div>';
     addHtml += '</div>';
     addHtml += '</div>';
@@ -80,10 +80,10 @@ var modalDom = function(type) {
     // 重设密码
     addHtml += '<div style="display: none;" class="oper-box reset">';
     addHtml += '<div class="holder">';
-    addHtml += '<div class="with-line">重设密码</div>';
+    addHtml += '<div class="with-line with-line5">重设密码</div>';
     addHtml += '<form class="reset-form" class="form-horizontal" id="resetForm" autocomplete="off">';
     addHtml += '<div class="form-group relative">';
-    addHtml += '<input class="form-control" id="resetMobile" name="mobile" type="text" placeholder="手机号" autocomplete="off">';
+    addHtml += '<input class="form-control" id="resetMobile" name="mobile" type="text" placeholder="手机号码" autocomplete="off">';
     addHtml += '<span class="verify-result verify-mobile"></span>';
     addHtml += '</div>';
     addHtml += '<div class="form-group relative">';
@@ -98,14 +98,14 @@ var modalDom = function(type) {
     addHtml += '<div class="input-group">';
     addHtml += '<input class="verify-code form-control" id="resetVerifyMobileCode" name="code" type="text" placeholder="手机验证码" required="">';
     addHtml += '<span class="input-group-btn">';
-    addHtml += '<input class="btn btn-default" id="resetVerifyMobileCodeSend" type="button" value="获取验证码">';
+    addHtml += '<input class="btn btn-default" id="resetVerifyMobileCodeSend" type="button" value="获取短信验证码">';
     addHtml += '</span>';
     addHtml += '<span class="verify-result verify-mobile-code"></span>';
     addHtml += '</div>';
     addHtml += '</div>';
-    addHtml += '<button class="btn btn-primary block full-width m-b" id="resetPasswordButton" type="button">重设密码</button>';
+    addHtml += '<button class="btn btn-primary block full-width m-b" id="resetPasswordButton" type="button">找回密码</button>';
     addHtml += '</form>';
-    addHtml += '<a class="back red-link">又想起来了»</a>';
+    addHtml += '<a class="back red-link">又想起密码了»</a>';
     addHtml += '</div>';
     addHtml += '</div>';
 
@@ -118,10 +118,10 @@ var modalDom = function(type) {
     addHtml += '</div>';
     addHtml += '<div class="signup-form" style="display: none">';
     addHtml += '<div class="holder">';
-    addHtml += '<div class="with-line">使用手机注册</div>';
+    addHtml += '<div class="with-line with-line4">使用手机注册</div>';
     addHtml += '<form autocomplete="off" id="registerForm">';
     addHtml += '<div class="form-group relative">';
-    addHtml += '<input class="form-control" id="registerMobile" type="text" placeholder="手机号" required="" autocomplete="off">';
+    addHtml += '<input class="form-control" id="registerMobile" type="text" placeholder="手机号码" required="" autocomplete="off">';
     addHtml += '<span class="verify-result verify-mobile"></span>';
     addHtml += '</div>';
     addHtml += '<div class="form-group relative">';
@@ -143,7 +143,7 @@ var modalDom = function(type) {
     addHtml += '<div class="input-group">';
     addHtml += '<input class="verify-code form-control" id="verifyMobileCode" type="text" name="code" placeholder="手机验证码" required="">';
     addHtml += '<span class="input-group-btn">';
-    addHtml += '<input class="btn btn-default" id="verifyMobileCodeSend" type="button" value="获取验证码">';
+    addHtml += '<input class="btn btn-default" id="verifyMobileCodeSend" type="button" value="获取短信验证码">';
     addHtml += '</span>';
     addHtml += '<span class="verify-result verify-mobile-code"></span>';
     addHtml += '</div>';
@@ -154,7 +154,7 @@ var modalDom = function(type) {
     addHtml += '</div>';
     addHtml += '</div>';
     addHtml += '</div>';
-    addHtml += '<div class="close" data-dismiss="modal" aria-label="Close"><i></i></div>';
+    addHtml += '<div class="close" data-dismiss="modal" aria-label="Close"><i>&#xe66b;</i></div>';
     addHtml += '</div>';
     addHtml += '</div>';
     addHtml += '</div>';
