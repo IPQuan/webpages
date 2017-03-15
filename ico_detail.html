@@ -98,8 +98,16 @@
                         <div>参与人数：<div class="floatRight">100人</div></div>
                         <div>剩余时间：<div class="floatRight">10天</div></div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 lastOne">
-                        <div>已筹金额：<div class="floatRight">350BTC</div></div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 lastOne">
+                        <div class="remainM">
+                            <div class="mLeft">
+                                <div>已筹金额</div>
+                                <span>350.1234</span>
+                            </div>
+                            <div class="mRight">
+                                <a><span>参与ICO</span><i>&#xe604;</i></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-12 barWrapper">
                         <div class="barContentWrapper">
@@ -213,7 +221,7 @@
                             <div id="comment-list01">
                                 <div class="listWrapper">
                                     <div class="sender">
-                                        <div class="comment-num">01</div>
+                                        <div class="comment-num" data-toggle="tooltip" data-placement="top" title="排序" value="01">01</div>
                                         <div class="comment-delete">
                                             <div class="delete-wrapper">
                                                 <img src="Images/delete.svg" onclick="to_delete(this)" value="01" data-toggle="tooltip" data-placement="top" title="删除" />
@@ -257,7 +265,7 @@
                             <div id="comment-list02">
                                 <div class="listWrapper">
                                     <div class="sender">
-                                        <div class="comment-num">02</div>
+                                        <div class="comment-num" data-toggle="tooltip" data-placement="top" title="排序" value="02">02</div>
                                         <div class="comment-delete">
                                             <div class="delete-wrapper">
                                                 <img src="Images/delete.svg" onclick="to_delete(this)" value="02" data-toggle="tooltip" data-placement="top" title="删除" />
@@ -401,6 +409,13 @@
     $(function ()
     {
         $('[data-toggle="tooltip"]').tooltip();
+        $('.comment-num').click(function(){
+             var text = $(this).html();
+             if(text.indexOf('**')!=-1){
+                 $(this).html('<input type="text" onblur="finish_edit(this)"/>');
+                 $(this).find('input').focus();
+             }
+        })
     });
     function to_send(obj){<!--TODO ID命名规则-->
         var id = $('.comment-list>div').length+1;
@@ -413,9 +428,17 @@
           content:$('.comment-detail textarea').val().trim(),
           date:getDate()
         };
-        $('.comment-list').prepend('<div id="comment-list'+obj.newId+'"> <div class="listWrapper"> <div class="sender"> <div class="comment-num">'+obj.newId+'</div> <div class="comment-delete"> <div class="delete-wrapper"> <img src="Images/delete.svg" onclick="to_delete(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="删除" /> </div> </div><div class="comment-round">'+obj.user+'：&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> '+obj.content+' </div> <div class="comment-date"> <span class="dateH">'+obj.date+'</span> <i onclick="to_reply(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="回复">&#xe61c;</i> </div> </div> </div> ' +
+        $('.comment-list').prepend('<div id="comment-list'+obj.newId+'"> <div class="listWrapper"> <div class="sender"> <div class="comment-num" data-toggle="tooltip" data-placement="top" title="排序" value="'+obj.newId+'">'+obj.newId+'</div> <div class="comment-delete"> <div class="delete-wrapper"> <img src="Images/delete.svg" onclick="to_delete(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="删除" /> </div> </div><div class="comment-round">'+obj.user+'：&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> '+obj.content+' </div> <div class="comment-date"> <span class="dateH">'+obj.date+'</span> <i onclick="to_reply(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="回复">&#xe61c;</i> </div> </div> </div> ' +
                 '<div class="replier"> <div class="replyComment hide"><!--回复--> <div class="comment-round">&nbsp;</div> <div class="comment-content"> <textarea></textarea> <div class="send-comment"> <a class="cancel" value="'+obj.newId+'" onclick="to_reply_cancel(this)">取消</a> <a class="send" value="'+obj.newId+'" onclick="to_reply_send(this)">发送</a> </div> </div> </div> <div class="editCommentWrapper hide"> <div class="comment-round">&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> </div> <div class="comment-date"> <span class="dateH"></span> <i onclick="to_edit(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i> </div> <div class="editComment hide"> <textarea></textarea> <div class="send-comment"> <a class="cancel" value="'+obj.newId+'" onclick="to_cancel_send(this)">取消</a> <a class="send" value="'+obj.newId+'" onclick="to_edit_send(this)">发送</a> </div> </div> </div> </div> </div> </div> </div>');
         $(".comment-detail textarea").val('');
+        $('.comment-num').unbind('click');
+        $('.comment-num').click(function(){
+            var text = $(this).html();
+            if(text.indexOf('**')!=-1){
+                $(this).html('<input type="text" onblur="finish_edit(this)"/>');
+                $(this).find('input').focus();
+            }
+        })
         $('[data-toggle="tooltip"]').tooltip();
     }
     function to_cancel(){
@@ -424,6 +447,7 @@
     function to_edit(obj) {<!--TODO value 和其最上层comment-list的id最后几位数字对应-->
         var id = $(obj).attr('value');
         $('#comment-list'+id+ ' .replier .editComment').removeClass('hide').find('textarea').val($('#comment-list'+id+ ' .replier .comment-reply').html().trim()).focus();
+        $('#comment-list'+id+ ' .comment-num').html('**').tooltip('show');
     }
     function to_edit_send(obj){
         var id = $(obj).attr('value');
@@ -432,15 +456,20 @@
         $('#comment-list'+id+ ' .editComment textarea').html('');
         $('.editComment').addClass('hide');
         $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
+        if($('#comment-list'+id+ ' .comment-num').html().indexOf('**')!=-1){
+            $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
+        }
     }
     function to_cancel_send(obj){
         var id = $(obj).attr('value');
         $('#comment-list'+id+ ' .replier .editComment').addClass('hide').find('textarea').html($('#comment-list'+id+ ' .replier .comment-reply').html().trim()).focus();
+        $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
     }
     function to_reply(obj){
         var id = $(obj).attr('value');
         $('#comment-list'+id+ ' .replyComment').removeClass('hide');
         $('#comment-list'+id+ ' .replyComment textarea').focus();
+        $('#comment-list'+id+ ' .comment-num').html('**').tooltip('show');
     }
     function to_reply_send(obj){
         var id = $(obj).attr('value');
@@ -451,11 +480,15 @@
         $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
         $('#comment-list'+id+ ' .editCommentWrapper .comment-round').html('晓物物：');<!--TODO 作者的用户名-->
         $('#comment-list'+id+ ' .sender').find('i').remove();
+        if($('#comment-list'+id+ ' .comment-num').html().indexOf('**')!=-1){
+            $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
+        }
     }
     function to_reply_cancel(obj){
         var id = $(obj).attr('value');
         $('#comment-list'+id+' .replyComment textarea').val('');
         $('#comment-list'+id+ ' .replyComment').addClass('hide');
+        $('#comment-list'+id+ ' .comment-num').html(id);
     }
     function to_delete(obj){
         var id = $(obj).attr('value');
@@ -471,6 +504,21 @@
         var second = myDate.getSeconds();
         var time = year+'/'+month+'/'+date+' '+hour+':'+min+':'+second;
         return time;
+    }
+    function finish_edit(obj){
+        var v= $(obj).parent().attr('value');
+        if($(obj).val().trim().length <= 0)
+        {
+            $('#comment-list'+v+ ' .comment-num').html('**');
+        }else{
+            $(obj).parent().html($(obj).val()).tooltip('hide');
+            var value = $(obj).val().trim();
+            $('#comment-list'+v+ ' div').attr('value',value);
+            $('#comment-list'+v+ ' i').attr('value',value);
+            $('#comment-list'+v+ ' img').attr('value',value);
+            $('#comment-list'+v+ ' a').attr('value',value);
+            $('#comment-list'+v).attr('id','comment-list'+value);
+        }
     }
 </script>
 </body>
