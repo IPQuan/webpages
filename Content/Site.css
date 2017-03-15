@@ -15,6 +15,8 @@ body > .container { margin-top:55px }
 
 a:focus, a:hover { text-decoration:none }
 
+.fixed-width { width:1170px }
+
 /*工具提示*/
 .tooltip-inner { background:#3ebcd0; }
 .tooltip.top .tooltip-arrow { border-top-color:#3ebcd0 }
@@ -22,19 +24,21 @@ a:focus, a:hover { text-decoration:none }
 /*导航栏*/
 .navbar { min-height:55px; margin-bottom:0; }
 
+.navbar .container { width:100%; max-width:1170px }
+
 .navbar-default { background-color:#f6f6f6; border-bottom:3px solid #50e2e3; }
 
 .navbar-brand > img { height:46px }
 
-.navbar-brand { margin: 3px 38px 6px 0; padding:0; height:auto }
+.navbar-brand { margin: 3px 28px 6px 0; padding:0; height:auto }
 
-.navbar-default .navbar-nav > li > a { font-size:17px; color:#1c9dbf; letter-spacing:5px; padding:17px 15px 18px }
+.navbar-default .navbar-nav > li > a { font-size:17px; color:#1c9dbf; letter-spacing:3px; padding:17px 15px 18px }
 
-.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover { font-size:17px; color:#1c9dbf; letter-spacing:5px; }
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover { font-size:17px; color:#1c9dbf; }
 
-.navbar-form .form-group { width:271px; height:40px; background: #dfeff6; border: 2px solid #50e2e3; border-radius: 100px; }
+.navbar-form .form-group { width:271px; height:39px; background: #dfeff6; border: 1.5px solid #50e2e3; border-radius: 100px; transition:width .2s }
 
-.navbar-form .form-control { display:inline-block; height:36px; width: 230px; text-align:center; border-radius: 100px; background: #dfeff6; border:none; box-shadow:none }
+.navbar-form .form-control { display:inline-block; height:36px; width: 230px; text-align:center; border-radius: 100px; background: #dfeff6; border:none; box-shadow:none; transition:width .2s }
 
 .navbar-form button { background:none; border:none }
 
@@ -43,6 +47,22 @@ a:focus, a:hover { text-decoration:none }
 div.navbar-right > * { display:inline-block }
 
 .navbar-right ul { float:right }
+
+.navbar-default .navbar-nav > li > a#settingBtn { letter-spacing:1px }
+
+@media only screen and (max-width: 1200px) {
+    .navbar-default .navbar-nav > li > a{ letter-spacing:2px}
+    .navbar-form .form-group{width:240px}
+    .navbar-form .form-control { width: 199px }
+}
+@media only screen and (max-width: 1080px) {
+    .navbar-form .form-group{width:200px}
+    .navbar-form .form-control { width: 159px }
+}
+
+@media only screen and (max-width: 980px) {
+    .navbar form.navbar-form { display:none }
+}
 /*end 导航栏*/
 
 /*footer*/
@@ -89,8 +109,6 @@ ul.menu-list li i, ul.menu-list li img { display:inline; position:absolute; left
 ul.menu-list li { font-size: 14px; color: #4a4a4a; letter-spacing: 1.17px; text-align: center; }
 
 ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing: 1.25px; text-align: center; }
-
-.fixed-width { width:1170px }
 /*end 用户中心 menu*/
 
 /*个人资料页面*/
@@ -115,7 +133,7 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 
 .placeholder i, .edit i, .finished i { color:#3ebcd0; font-size:16px; vertical-align:3px; cursor:pointer }
 
-.edit .form-control, .finished .form-control { border-radius:0; font-size:15px; height:30px; overflow:hidden; width:auto; margin:8px 20px 0 0 }
+.edit .form-control, .finished .form-control { line-height:18px; border-radius:0; font-size:15px; height:30px; overflow:hidden; width:auto; margin:8px 20px 0 0 }
 
 .edit .form-control.multi-row, .finished .form-control.multi-row { height:120px; }
 
@@ -162,7 +180,7 @@ ul.menu-list *:first-child div { font-size: 15px; color: #4a4a4a; letter-spacing
 .auth-text i { margin-right:6px; vertical-align:-1px }
 /*end 认证图标*/
 
-button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8px; letter-spacing:6px; font-size:18px; }
+button.save { margin:30px 7px 0;  background:#3ebcd0; width:150px; border-radius:8px; letter-spacing:6px; font-size:18px; }
 
 /*安全中心*/
 .value select.form-control { padding:3px 15px; width:198px }
@@ -272,8 +290,17 @@ button.save { margin-top:30px; background:#3ebcd0; width:150px; border-radius:8p
 .withdraw-note ol { padding-left: 30px; font-size: 15px; color: #1d9dbf; letter-spacing: 0; line-height: 45px; }
 .withdraw-assets .balance{ padding:0 15px; font-size:14px; line-height:30px; border:1px solid #cacaca; height:30px; margin:8px 0 0 -1px }
 .withdraw-assets .balance-value{color:#0a8bc5;}
-.withdraw-assets.edit select.form-control{  margin:8px 0 0 0; width:100%;}
+.withdraw-assets.edit select.form-control{ margin:8px 0 0 0; width:100%;}
 .edit .form-control.withdraw-input{width:100%}
 .withdraw-phone-code .btn { position: absolute; border-radius: 0; color: #fff; background: #41b9d1; width: 190px; height: 30px; right: 15px; margin-top: -30px; padding: 0; }
 
 /*end 提现页面*/
+
+/*富文本编辑器*/
+#editor { height: 318px; border-radius:0; background: #ffffff; }
+#editor i { font-style:italic }
+/*end 富文本编辑器*/
+
+/*项目发起页面*/
+.website{font-size:15px}
+/*end项目发起页面*/
