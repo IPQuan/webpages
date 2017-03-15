@@ -671,7 +671,7 @@ a.send:hover,a.send:focus{
 }
 .replier{
     font-size:16px;
-    color:#4a4a4a;
+    color:#6c6c6c;
     letter-spacing:0;
     line-height:30px;
     overflow: auto;
@@ -679,6 +679,17 @@ a.send:hover,a.send:focus{
 }
 .comment-wrapper{
     padding-bottom:10px;
+}
+.comment-num input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    outline: none;
+    border:none;
+    width: 37px;
+    height: 20px;
+    text-align: center;
 }
 .comment-date{
     font-size:14px;
