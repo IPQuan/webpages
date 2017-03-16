@@ -307,4 +307,5 @@ button.save { margin:30px 7px 0;  background:#3ebcd0; width:150px; border-radius
 .project-img-div{position:relative}
 .project_add-icon{ position:absolute; cursor:pointer; font-size:80px; line-height:80px; color:#fff; top:50%; left:50%; margin:-40px 0 0 -40px; }
 .menu-right section .field-alert { text-align: center; font-size: 15px; color: #1d9dbf; }
+.menu-right section .field-required { text-align: right; font-size: 15px; color: #1d9dbf; }
 /*end项目发起页面*/
