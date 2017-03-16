@@ -1,4 +1,4 @@
-﻿body { background-color:#f6f6f6 }
+﻿body { background-color: #f6f6f6; font-family: "PingFangSC-Regular","PingHei","Lucida Grande","Lucida Sans Unicode","STHeitiSC-Light",Helvetica,"BBAlpha Sans","S60 Sans","Hiragino Sans GB",Arial,"Microsoft YaHei","Verdana",SimHei,STXihei,SimSun,"WenQuanYi Micro Hei",sans-serif; }
 
 @font-face {
   font-family: 'iconfont';  /* project id 240203 */
@@ -303,4 +303,8 @@ button.save { margin:30px 7px 0;  background:#3ebcd0; width:150px; border-radius
 
 /*项目发起页面*/
 .website{font-size:15px}
+.new-project-img { width:100%; background: #ededed; border: 1px solid #cacaca; height: 328px; }
+.project-img-div{position:relative}
+.project_add-icon{ position:absolute; cursor:pointer; font-size:80px; line-height:80px; color:#fff; top:50%; left:50%; margin:-40px 0 0 -40px; }
+.menu-right section .field-alert { text-align: center; font-size: 15px; color: #1d9dbf; }
 /*end项目发起页面*/
