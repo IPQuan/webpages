@@ -9,8 +9,7 @@
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/responsive.css" rel="stylesheet" />
     <style>
-        .menu-left { height:1528px;}
-        .menu-right { height:1528px}
+        .menu-left, .menu-right { height:1528px}
     </style>
 </head>
 <body>
@@ -141,7 +140,12 @@
                         <textarea class="form-control multi-row" maxlength="324" placeholder="给项目添加简介" oninput="setTextCount('text_count2', this)"></textarea>
                     </div>
                     <br /><br />
-                    <div class="field">项目白皮书</div>
+                    <div class="row">
+                        <div class="col-md-2 field">项目白皮书</div>
+                        <div class="col-md-8 field field-alert"></div>
+                        <div class="col-md-2 field field-required">必填</div>
+                    </div>
+                    <div class="field"></div>
                     <div class="form-group wysiwyg">
                         <!-- #region 富文本编辑器控制按钮 -->
                         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
