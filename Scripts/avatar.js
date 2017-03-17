@@ -16,7 +16,7 @@
   function CropAvatar($element) {
     this.$container = $element;
 
-    this.$avatarView = this.$container.find('.avatar-view');
+    this.$avatarView = this.$container.find('#divAvatar');
     this.$avatar = this.$avatarView.find('img');
     this.$avatarModal = $("body").find('#avatar-modal');
     this.$loading = $("#page-wrapper").find('.loading');
@@ -248,7 +248,15 @@
         },
 
         success: function (data) {
-          _this.submitDone(data);
+          if(data.code==0) {
+              data.result+="?ver="+Math.random().toString();
+              _this.submitDone(data);
+              $.message.pop(data.msg,data.type);
+              $("#avatar-modal .close").click();
+          }
+          else {
+            $.message.pop(data.msg,data.type);
+          }
         },
 
         error: function (XMLHttpRequest, textStatus, errorThrown) {
