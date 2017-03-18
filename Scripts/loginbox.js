@@ -40,8 +40,8 @@ var modalDom = function(type) {
     addHtml += '<div class="with-line with-line3">用第三方帐号注册IP圈</div>';
     addHtml += '<div class="buttons">';
     addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"><i>&#xe73d;</i></a>';
-    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"><i>&#xe73c;</i></a>';
-    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"><i>&#xe740;</i></a>';
+    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"><i>&#xe73c;</i></a>';
+    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"><i>&#xe740;</i></a>';
     addHtml += '</div>';
     addHtml += '<a class="switch-mobile-signup brown-link">使用手机号注册»</a><div class="lineHr"></div>';
     addHtml += '</div>';
@@ -57,8 +57,8 @@ var modalDom = function(type) {
     addHtml += '<div class="with-line">使用第三方帐号登录</div>';
     addHtml += '<div class="buttons">';
     addHtml += '<a class="weibo" id="WBLoginBtn" title="微博帐号登录" href="/user/auth/weibo" rel="nofollow"><i>&#xe73d;</i></a>';
-    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"><i>&#xe73c;</i></a>';
-    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"><i>&#xe740;</i></a>';
+    addHtml += '<a class="weixin" id="WXLoginBtn" title="微信账号登录" href="/user/auth/wx" rel="nofollow"><i>&#xe73c;</i></a>';
+    addHtml += '<a class="qzone" id="QQLoginBtn" title="QQ帐号登录" href="/user/auth/qq" rel="nofollow"><i>&#xe740;</i></a>';
     addHtml += '</div>';
     addHtml += '<div class="with-line2">使用手机号登录</div>';
     addHtml += '<form>';
