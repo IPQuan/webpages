@@ -456,9 +456,7 @@
         $('#comment-list'+id+ ' .editComment textarea').html('');
         $('.editComment').addClass('hide');
         $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
-        if($('#comment-list'+id+ ' .comment-num').html().indexOf('**')!=-1){
-            $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
-        }
+        $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
     }
     function to_cancel_send(obj){
         var id = $(obj).attr('value');
@@ -480,9 +478,7 @@
         $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
         $('#comment-list'+id+ ' .editCommentWrapper .comment-round').html('晓物物：');<!--TODO 作者的用户名-->
         $('#comment-list'+id+ ' .sender').find('i').remove();
-        if($('#comment-list'+id+ ' .comment-num').html().indexOf('**')!=-1){
-            $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
-        }
+        $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
     }
     function to_reply_cancel(obj){
         var id = $(obj).attr('value');
@@ -509,9 +505,8 @@
         var v= $(obj).parent().attr('value');
         if($(obj).val().trim().length <= 0)
         {
-            $('#comment-list'+v+ ' .comment-num').html('**');
+             $('#comment-list'+v+ ' .comment-num').html('**');
         }else{
-            $(obj).parent().html($(obj).val()).tooltip('hide');
             var value = $(obj).val().trim();
             $('#comment-list'+v+ ' div').attr('value',value);
             $('#comment-list'+v+ ' i').attr('value',value);
