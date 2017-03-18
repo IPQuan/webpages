@@ -173,11 +173,6 @@
         -o-transform:scale(0.85);
     }
 }
-@media all and (min-width: 768px) and (max-width: 1200px) {
-    #bannerSwiper,.topImg{
-        margin-top:115px;
-    }
-}
 @media all and (min-width: 992px) and (max-width: 1200px) {
     .intro .i-left img{
         width:240px;

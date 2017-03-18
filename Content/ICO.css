@@ -811,11 +811,6 @@ a.send:hover,a.send:focus{
         padding:45px 10px 0;
     }
 }
-@media all and (min-width: 768px) and (max-width: 1200px) {
-    #bannerSwiper,.topImg{
-        margin-top:115px;
-    }
-}
 @media all and (max-width:991px) {
     .ico-content .col-xs-12{
         padding:0 15px!important;
