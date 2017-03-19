@@ -13,6 +13,7 @@
     </style>
 </head>
 <body>
+    <div class="mask"></div>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -195,6 +196,9 @@
                                 <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
                                 <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
                             </div>
+                            <div class="btn-group">
+                                <a class="btn" onclick="fullScreen()" title="Full screen"><i id="icon-fullscreen">&#xe633;</i></a>
+                            </div>
                             <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
                         </div>
                         <!-- #endregion -->
@@ -348,6 +352,29 @@
         {
             var maxLength = $(input).attr("maxlength");
             $("#" + text_count_id).text(maxLength - $(input).text().length);
+        }
+
+        var isFullScreen = false;
+        function fullScreen()
+        {
+            if (isFullScreen)
+            {
+
+                $(".wysiwyg").removeClass("full-screen");
+                $("body").removeClass("disable-scroll");
+                $(".mask").removeClass("active");
+                $("#icon-fullscreen").html("&#xe633;");
+                isFullScreen = false;
+            }
+            else
+            {
+
+                $(".wysiwyg").addClass("full-screen");
+                $("body").addClass("disable-scroll");
+                $(".mask").addClass("active");
+                $("#icon-fullscreen").html("&#xe616;");
+                isFullScreen = true;
+            }
         }
         
     </script>

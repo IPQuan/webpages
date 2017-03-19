@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'iconfont';  /* project id 240203 */
-  src: url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.eot');
-  src: url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_3p9qprevtr8dunmi.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_h9oait236aoo5hfr.eot');
+  src: url('//at.alicdn.com/t/font_h9oait236aoo5hfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_h9oait236aoo5hfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_h9oait236aoo5hfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_h9oait236aoo5hfr.svg#iconfont') format('svg');
 }
 
 i { font-family:iconfont; font-style:normal }
@@ -23,6 +23,8 @@ a:focus, a:hover { text-decoration:none }
 
 /*导航栏*/
 .navbar { min-height:55px; margin-bottom:0; }
+
+.nav > li a#settingBtn { max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 
 .navbar .container { width:100%; max-width:1170px }
 
@@ -308,4 +310,8 @@ button.save { margin:30px 7px 0;  background:#3ebcd0; width:150px; border-radius
 .project_add-icon{ position:absolute; cursor:pointer; font-size:80px; line-height:80px; color:#fff; top:50%; left:50%; margin:-40px 0 0 -40px; }
 .menu-right section .field-alert { text-align: center; font-size: 15px; color: #1d9dbf; }
 .menu-right section .field-required { text-align: right; font-size: 15px; color: #1d9dbf; }
+.full-screen { position:fixed; height:100%; width:100%; padding:80px; top:0; left:0; z-index:100 }
+.full-screen #editor { height:90%}
+.disable-scroll { overflow:hidden }
+body > div.mask.active { position:absolute; z-index:10; width:10000px; height:10000px; top:0; left:0; background:#fff }
 /*end项目发起页面*/
