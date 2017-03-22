@@ -105,6 +105,7 @@
     font-size:14px;
     color:#9b9b9b;
     letter-spacing:0;
+    float: left;
 }
 .invest-content input.inputPassword{
     width: 100%;
@@ -903,4 +904,59 @@ a.send:hover,a.send:focus{
 .squaredThree input[type=checkbox]:checked + label:after {
     /*filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);*/
     opacity: 1;
+}
+
+
+
+
+.dropdown{
+    width: 22.93%;
+    border: none;
+    border-radius: 0;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    text-align: left;
+    height: 31px;
+    line-height: 29px;
+    float: left;
+    margin-bottom: 0px;
+    z-index: 77;
+}
+.dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
+.dropdown dd { position:relative; }
+.dropdown a, .dropdown a:visited { color:#4a4a4a; text-decoration:none; outline:none; }
+.dropdown dt a {
+    display: block;
+    width: 100%;
+    border: none;
+    font-weight:normal;
+    color:#4a4a4a;
+}
+.dropdown dt a span {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 31px;
+}
+.dropdown dd ul { background:#fff; border:1px solid #cacaca; color:#C5C0B0; display:none; left:-1px; position:absolute; top:0; width: calc(100% + 2px); list-style:none;  }
+.dropdown dd ul li a { padding:5px 0; display:block; }
+.dropdown img{
+    height: 16px;
+    border: none;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+@media all and (max-width: 767px) {
+    .dropdown{
+        width:100%;
+        border:1px solid #cacaca;
+        margin-bottom:10px;
+    }
+    .dropdown dd ul{
+        border-top:0;
+        top:-1px;
+    }
 }

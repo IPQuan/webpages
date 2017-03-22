@@ -67,9 +67,18 @@
                         <div class="in-title">投资项目</div>
                         <div class="invest-content">
                             <input type="text" placeholder="请输入投资额度"/>
-                            <select>
-                                <option><i>&#xe6d7;</i>&nbsp;比特币</option>
-                            </select>
+                            <dl class="dropdown">
+                                <dt><a><span class="d-wrapper">
+                                    <img class="flag" src="Images/bit.svg" alt="" /><span class="bit">比特币</span><!--模拟下拉菜单,在这一行获取选中的select值即可-->
+                                    </span>
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li><a><img class="flag" src="Images/bit.svg" alt="" /><span class="bit">比特币</span></a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
                             <div>余额：<span>12912034.3451</span></div>
                         </div>
                     </div>
@@ -219,6 +228,20 @@
     window.onresize=function(){
         resizeBanner();
     }
+
+    $(document).ready(function() {
+        $(".dropdown img.flag").addClass("flagvisibility");
+
+        $(".dropdown dt a").click(function() {
+            $(".dropdown dd ul").toggle();
+        });
+
+        $(".dropdown dd ul li a").click(function() {
+            var text = $(this).html();
+            $(".d-wrapper").html(text);
+            $(".dropdown dd ul").hide();
+        });
+    });
 </script>
 </body>
 </html>
