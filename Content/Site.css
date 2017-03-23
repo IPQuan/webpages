@@ -300,6 +300,7 @@ button.save { margin:30px 7px 0;  background:#3ebcd0; width:150px; border-radius
 
 /*富文本编辑器*/
 #editor { height: 318px; border-radius:0; background: #ffffff; }
+#editor::after{ content:"◢"; cursor:pointer; position:absolute; right:0; bottom:5px; width:10px; height:10px; color:#3ebcd0}
 #editor i { font-style:italic }
 /*end 富文本编辑器*/
 

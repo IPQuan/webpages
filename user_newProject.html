@@ -8,8 +8,9 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/responsive.css" rel="stylesheet" />
+    <link href="libs/external/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
     <style>
-        .menu-left, .menu-right { height:1528px}
+        .menu-left, .menu-right { height:1528px; padding-bottom:50px; display:table}
     </style>
 </head>
 <body>
@@ -290,6 +291,8 @@
     <script src="libs/external/bootstrap-wysiwyg/bootstrap-wysiwyg.js"></script>
     <script src="libs/external/bootstrap-wysiwyg/jquery.hotkeys.js"></script>
     <script src="Scripts/Site.js"></script>
+    <script src="libs/external/jquery-ui-1.12.1/jquery-ui.js"></script>
+    
     <script>
         function copy_to_hidden() {
             $("#hidden_content").val($("#editor").html());
@@ -376,7 +379,7 @@
                 isFullScreen = true;
             }
         }
-        
+        $("#editor").resizable();
     </script>
 </body>
 </html>
