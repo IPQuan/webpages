@@ -8,9 +8,8 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <link href="Content/responsive.css" rel="stylesheet" />
-    <link href="libs/external/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
     <style>
-        .menu-left, .menu-right { height:1528px; padding-bottom:50px; display:table}
+        .menu-left, .menu-right { height:1528px; padding-bottom:50px}
     </style>
 </head>
 <body>
@@ -198,7 +197,7 @@
                                 <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
                             </div>
                             <div class="btn-group">
-                                <a class="btn" onclick="fullScreen()" title="Full screen"><i id="icon-fullscreen">&#xe633;</i></a>
+                                <a class="btn" onclick="fullScreen()" title="Full screen"><i class="fullscreen">&#xe633;</i></a>
                             </div>
                             <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
                         </div>
@@ -291,7 +290,6 @@
     <script src="libs/external/bootstrap-wysiwyg/bootstrap-wysiwyg.js"></script>
     <script src="libs/external/bootstrap-wysiwyg/jquery.hotkeys.js"></script>
     <script src="Scripts/Site.js"></script>
-    <script src="libs/external/jquery-ui-1.12.1/jquery-ui.js"></script>
     
     <script>
         function copy_to_hidden() {
@@ -366,7 +364,7 @@
                 $(".wysiwyg").removeClass("full-screen");
                 $("body").removeClass("disable-scroll");
                 $(".mask").removeClass("active");
-                $("#icon-fullscreen").html("&#xe633;");
+                $(".fullscreen").html("&#xe633;");
                 isFullScreen = false;
             }
             else
@@ -375,7 +373,7 @@
                 $(".wysiwyg").addClass("full-screen");
                 $("body").addClass("disable-scroll");
                 $(".mask").addClass("active");
-                $("#icon-fullscreen").html("&#xe616;");
+                $(".fullscreen").html("&#xe616;");
                 isFullScreen = true;
             }
         }
