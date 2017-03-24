@@ -85,6 +85,8 @@ div.navbar-right > * { display:inline-block }
 .copyright-text { font-size:18px; color:#fff; margin:52px auto 48px; }
 /*end footer*/
 
+img.avatar {border-radius: 100%;}
+
 /*用户中心 menu*/
 .menu-left { height:1270px; margin:30px 0; padding:0; box-shadow:2px 0 10px 0 rgba(0,0,0,0.10); background:#fafafa; }
 
