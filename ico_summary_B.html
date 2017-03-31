@@ -397,10 +397,10 @@
             icoCarousel = '<section class="ico-carousel"> <div class="container"> <div class="row"> <div class="swiper-container" id="icoSwiper"> <div class="swiper-wrapper">'+swipeContent+'</div> <div class="swiper-pagination swiper-pagination0'+length+'"></div> </div> </div> </div> </section>';
         }
         $('.projectWrapper').append('<div id='+newId+'>' + aboutIco + icoProgress + icoRanking + icoCarousel + '</div>');
-        resizeSmation(newId,obj.completeDegree);
+        resizeSmation('#'+newId,obj.completeDegree);
         resizeBanner();
         if(swipeContent!='') {
-            newSwiper(newId, 'swiper-pagination0' + length);
+            newSwiper('#'+newId, 'swiper-pagination0' + length);
         }
     }
 
