@@ -24,7 +24,7 @@ a:focus, a:hover { text-decoration:none }
 /*导航栏*/
 .navbar { min-height:55px; margin-bottom:0; }
 
-.nav > li a#settingBtn { max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.nav > li a#settingBtn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 
 .navbar .container { width:100%; max-width:1170px }
 
