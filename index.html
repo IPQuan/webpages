@@ -50,7 +50,8 @@
 </nav>
 
 <section id="homeWrapper">
-    <div class="topImg"></div>
+    <img src="https://www.ipquan.com/images/swiper1.jpg" class="width-all"/>
+    <!--<div class="topImg"></div>-->
 </section>
 
 <section class="know">
@@ -99,6 +100,7 @@
         </div>
     </div>
 </section>
+<div class="one-line"></div>
 <section class="intro">
     <div class="container">
         <div class="i-title">
@@ -120,6 +122,7 @@
         </div>
     </div>
 </section>
+<div class="one-line"></div>
 <section class="intro intro2">
     <div class="container">
         <div class="i-title">
@@ -140,6 +143,7 @@
         </div>
     </div>
 </section>
+<div class="one-line"></div>
 <section class="intro intro3">
     <div class="container">
         <div class="i-title">
@@ -160,15 +164,18 @@
         </div>
     </div>
 </section>
+<div class="one-line"></div>
 <section class="picWrapper">
     <div>
         <div class="p-title">
             团队的跨界基因
         </div>
         <img src="Images/replace.png" />
+        <div class="one-line"></div>
     </div>
     <img src="Images/home-image2.png" />
 </section>
+<div class="one-line"></div>
 <section class="intro user1">
     <div class="container">
         <div class="i-title">
@@ -189,7 +196,7 @@
         </div>
     </div>
 </section>
-<section class="intro intro2 user2">
+<section class="intro user1">
     <div class="container">
         <div class="i-title">
             徐建新 CTO
@@ -209,12 +216,22 @@
         </div>
     </div>
 </section>
-<section class="picWrapper">
+<div class="one-line-white"></div>
+<section class="picWrapper all-come">
     <div>
         <div class="p-title colorFFF">
             我们来自区块链
         </div>
-        <img src="Images/replace.png" />
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <img src="Images/link.png" />
+                </div>
+                <div class="col-xs-12 p-content">
+                    我们从中国区块链的萌芽期开始，经历了行业完整的发展过程，是区块链的早期布道者。我们不但参与过数字货币挖矿，交易等区块链早期业态；还和行业先行者一道，发起了比特创业营，参与主办了具有标志意义的社区活动和行业峰会；更联合创始了国内首个实时开源共有链——小蚁区块链。此外，在过去的几年中，我们还亲身参与和见证了国内外多个明星区块链项目的ICO全程。
+                </div>
+            </div>
+        </div>
     </div>
     <img src="Images/home-image2.png" />
 </section>
@@ -298,24 +315,24 @@
 <script src="Scripts/jquery-3.1.1.min.js"></script>
 <script src="Scripts/bootstrap.min.js"></script>
 <script>
-    function resizeBanner(){//banner自适应
-        var width = $(window).width();
-        var minHeight = 450;
-        if(width>=1920){//满屏
-            minHeight = parseInt(450 * width / 1920);
-        }else if(width>1200){//1170
-            minHeight = 450;
-        }else{
-            minHeight = parseInt(450 * width / 1200);
-        }
-        $('.topImg').css('min-height',minHeight);
-    }
-    $(function (){
-        resizeBanner();
-    });
-    window.onresize=function(){//屏幕大小发生变化时
-        resizeBanner();
-    };
+//    function resizeBanner(){//banner自适应
+//        var width = $(window).width();
+//        var minHeight = 450;
+//        if(width>=1920){//满屏
+//            minHeight = parseInt(450 * width / 1920);
+//        }else if(width>1200){//1170
+//            minHeight = 450;
+//        }else{
+//            minHeight = parseInt(450 * width / 1200);
+//        }
+//        $('.topImg').css('min-height',minHeight);
+//    }
+//    $(function (){
+//        resizeBanner();
+//    });
+//    window.onresize=function(){//屏幕大小发生变化时
+//        resizeBanner();
+//    };
 
 </script>
 </body>
