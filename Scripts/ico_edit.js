@@ -32,6 +32,16 @@ function ready_to_edit3(obj){
     $(obj).siblings('div.wysiwyg').find(".form-control").html($(obj).html()).focus();
     changeIsSave(true);
 }
+function ready_to_edit4(obj)
+{
+    $(obj).parent().removeClass("placeholder").removeClass("finished").addClass("edit");
+    $(obj).parent().find(".form-control").focus();
+}
+function ready_to_edit5(obj)
+{
+    $(obj).parent().removeClass("placeholder").removeClass("finished").addClass("edit");
+    $(obj).parent().find(".form-control").focus();
+}
 function replaceTag(str){
     var reg=new RegExp("<br>","g");
     return str.replace(reg,"\n");
@@ -63,6 +73,30 @@ function finish_to_edit3(obj){
     $(obj).parent().addClass('hidden');
     $(obj).parent().siblings('div.content').removeClass('hidden').html($(obj).html());
 }
+function finish_to_edit4(obj)
+{
+    var _default = "**";
+    if ($(obj).val().length <= 0)
+    {
+        $(obj).parent().removeClass("finished").removeClass("edit").addClass("placeholder");
+        $(obj).parent().find("label").text(_default);
+        return;
+    }
+    $(obj).parent().removeClass("placeholder").removeClass("edit").addClass("finished");
+    $(obj).parent().find("label").text($(obj).val());
+}
+function finish_to_edit5(obj)
+{
+    var _default = "******";
+    if ($(obj).val().length <= 0)
+    {
+        $(obj).parent().removeClass("finished").removeClass("edit").addClass("placeholder");
+        $(obj).parent().find("label").text(_default);
+        return;
+    }
+    $(obj).parent().removeClass("placeholder").removeClass("edit").addClass("finished");
+    $(obj).parent().find("label").text($(obj).val());
+}
 function changeIsSave(obj){
     isSave = obj;
     if(isSave){
@@ -84,4 +118,21 @@ function setEditDefault(){
     $('#title').val($('#title').parent().find("label").html());
     $('#introduction').val(replaceTag($('#introduction').parent().find('.content').html().trim()));
     $('#editor').html($('#editor').parent().siblings('div.content').html());
+}
+
+var reg = /^100$|^(\d|[1-9]\d)(\.\d+)*$/; //大于等于0,小于等于100,整数小数都可以
+$('.pla-content i').click(function(){
+    changeIsSave(true);
+});
+$('#begin-time').click(function(){
+    changeIsSave(true);
+});
+$('#end-time').click(function(){
+    changeIsSave(true);
+});
+function delete_user(obj){
+    $(obj).parent().parent().parent().remove();
+}
+function add_user(){
+    $('#add_user').click();
 }
