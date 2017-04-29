@@ -383,4 +383,9 @@ body > .container.container2{
     margin-right:0!important;
     padding-right: 12px!important;
 }
+@media all and (max-width: 992px) {
+    .full-screen{
+        padding:80px 15px;
+    }
+}
 /**end 发起项目**/

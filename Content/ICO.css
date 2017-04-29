@@ -1075,4 +1075,7 @@ a.send:hover,a.send:focus{
         padding-left: 0;
         padding-right: 0;
     }
+    .full-screen{
+        padding:80px 15px;
+    }
 }
