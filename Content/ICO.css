@@ -972,3 +972,107 @@ a.send:hover,a.send:focus{
         width: 100px;
     }
 }
+/**项目编辑页 start**/
+.edit2 label{
+    font-size:28px;
+    color: #4a4a4a;
+}
+.text-center.edit{
+    text-align: left;
+}
+.edit2 input.form-control{
+    width: calc(78% - 51px);
+    margin-left: 45px;
+}
+.edit textarea.form-control{
+    min-height: 210px;
+    line-height: 30px;
+    padding:0 6px;
+}
+.edit .content{
+    display: none;
+}
+.editImg{
+    position: relative;
+}
+.editImg .project-img-div{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    height: 100%;
+    background: none;
+}
+.editImg .project-img-div .new-project-img{
+    height: 100%;
+    background: rgba(237,237,237,0.85);
+    border:none;
+}
+.min-height-800{
+    min-height: 800px;
+}
+.row-top{
+    line-height: 45px;
+    position: absolute;
+    top:0;
+    width: 100%;
+    color:#1d9dbf;
+    letter-spacing:1.25px;
+}
+.row-top2{
+    line-height: 20px;
+    color:#1d9dbf;
+    letter-spacing:1.25px;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    padding-left: 45px;
+    padding-right:75px;
+}
+.row-top2 .field{
+    padding-left:0;
+    padding-right:0;
+}
+.row-top2 .col-xs-3{
+    text-align: left;
+}
+.row-top3{
+    color:#1d9dbf;
+    letter-spacing:1.25px;
+    margin-top: -10px;
+    line-height: 20px;
+}
+.save-btns button.save{
+    margin:-15px 0 45px 0;
+}
+.full-screen{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 80px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.img-wrapper{
+    width: 40px!important;
+    height: 30px!important;
+}
+.ico-content .content img{
+    max-width: 100%;
+}
+@media all and (max-width: 992px) {
+    .edit2 input.form-control{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .row-top2{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
