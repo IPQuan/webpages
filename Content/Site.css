@@ -272,7 +272,7 @@ button.save { margin:30px 7px 0;  background:#3ebcd0; width:150px; border-radius
 .table > thead > tr > th{border-bottom:none}
 .table > tbody tr > td > i { margin:0 15px 0 }
 .table > tbody tr > td.text-left{ padding-left:50px ; width:26%}
-.table > tbody tr > td > a { color:#3ebcd0; margin-right: 10px }
+.table > tbody tr > td > a { color:#3ebcd0; margin-right: 10px;cursor: pointer; }
 .table > tbody tr > td > span.green { color:#3ebcd0; }
 /*end 表格*/
 
@@ -389,3 +389,19 @@ body > .container.container2{
     }
 }
 /**end 发起项目**/
+/**项目table**/
+.menu-right header.width-120{
+    width: 120px;
+}
+.project-th-1{
+    width: 75px;
+}
+.project-th-2{
+    width: 405px;
+}
+.project-th-3{
+    width: 120px;
+}
+.page-wrapper{
+    padding:40px 0 15px 0;
+}

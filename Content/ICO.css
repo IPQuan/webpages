@@ -1010,7 +1010,13 @@ a.send:hover,a.send:focus{
 }
 .min-height-800{
     min-height: 800px;
-    height: auto;
+    height: 800px;
+    overflow:auto;
+}
+.min-height-600{
+    min-height: 600px;
+    height: 600px;
+    overflow:auto;
 }
 .row-top{
     line-height: 45px;
@@ -1043,8 +1049,15 @@ a.send:hover,a.send:focus{
     margin-top: -10px;
     line-height: 20px;
 }
+.save-btns button{
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+}
 .save-btns button.save{
     margin:-15px 0 45px 0;
+}
+.save-btns1 button.save{
+    margin:30px 0 55px 0;
 }
 .full-screen{
     position: fixed;
@@ -1094,6 +1107,9 @@ a.send:hover,a.send:focus{
     line-height:45px;
     text-align:left;
     margin-bottom:20px;
+}
+.detail-title2{
+    margin-bottom:0;
 }
 .color1d9dbf{
     color:#1d9dbf!important;
@@ -1167,7 +1183,7 @@ a.send:hover,a.send:focus{
     height:26px;
     padding:0 15px;
     line-height: 25px;
-    color: #fff;
+    color: #fff!important;
 }
 .btn-submit:hover{
     color: #fff;
@@ -1254,6 +1270,12 @@ a.send:hover,a.send:focus{
     margin-top:-50px!important;
     margin-left:-50px!important;
     width: 100px!important;
+}
+.cd-value{
+    margin-left:-60px;
+}
+.page-wrapper{
+    margin-top:40px;
 }
 @media (max-width: 767px){
     .dropdown.dropdown2 dd ul {

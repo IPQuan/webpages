@@ -42,6 +42,25 @@ function ready_to_edit5(obj)
     $(obj).parent().removeClass("placeholder").removeClass("finished").addClass("edit");
     $(obj).parent().find(".form-control").focus();
 }
+function ready_to_edit6(obj){
+    $(obj).addClass('hidden');
+    $(obj).siblings('div.wysiwyg').removeClass('hidden');
+    $(obj).siblings('div.wysiwyg').find(".form-control").html($(obj).html()).focus();
+    $(obj).siblings('.save-btns').removeClass('hidden');
+    //changeIsSave(true);
+}
+function ready_to_edit7(obj){
+    if(!$(obj).hasClass('disabled')){
+        $('.cd-timeline-content').find('.form-group.wysiwyg').addClass('hidden');
+        $('.cd-timeline-content').find('.save-btns').addClass('hidden');
+        $('.cd-timeline-content').find('.cd-content').addClass('hidden');
+
+        $(obj).parent().siblings('div.cd-value').find('div.wysiwyg').removeClass('hidden');
+        $(obj).parent().siblings('div.cd-value').find('div.wysiwyg').find(".form-control").html($(obj).parent().siblings('div.cd-value').find('div.cd-content').html()).focus();
+        $(obj).parent().siblings('div.cd-value').find('.save-btns').removeClass('hidden');
+        $(obj).parent().siblings('div.cd-value').find('div.cd-content').addClass('hidden');
+    }
+}
 function replaceTag(str){
     var reg=new RegExp("<br>","g");
     return str.replace(reg,"\n");
@@ -100,10 +119,10 @@ function finish_to_edit5(obj)
 function changeIsSave(obj){
     isSave = obj;
     if(isSave){
-        $('.save-btns').removeClass('hidden');
+        $('.save-btns2').removeClass('hidden');
     }else{
-        if(!$('.save-btns').hasClass('hidden')){
-            $('.save-btns').addClass('hidden');
+        if(!$('.save-btns2').hasClass('hidden')){
+            $('.save-btns2').addClass('hidden');
         }
     }
 }
@@ -135,4 +154,24 @@ function delete_user(obj){
 }
 function add_user(){
     $('#add_user').click();
+}
+$('#save2').click(function(){
+    finish_to_edit3($('#editor3'));
+    $('.save-btns1').addClass('hidden');
+});
+$('.cd-timeline-content>div:first-child span:first-child').click(function(){
+    if($(this).parent().parent().find('.form-group.wysiwyg').hasClass('hidden')){
+        $('.cd-timeline-content').find('.form-group.wysiwyg').addClass('hidden');
+        $('.cd-timeline-content').find('.save-btns').addClass('hidden');
+        $('.cd-timeline-content').find('.cd-content').addClass('hidden');
+
+        $(this).parent().parent().find('.form-group.wysiwyg').addClass('hidden');
+        $(this).parent().parent().find('.save-btns').addClass('hidden');
+        $(this).parent().parent().find('.cd-content').removeClass('hidden');
+    }
+});
+function save(obj){
+   $(obj).parent().parent().find('.form-group.wysiwyg').addClass('hidden');
+   $(obj).parent().parent().find('.save-btns').addClass('hidden');
+   $(obj).parent().parent().find('.cd-content').addClass('hidden');
 }
