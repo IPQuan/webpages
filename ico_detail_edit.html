@@ -224,7 +224,7 @@
                             <div class="placeholder">
                                 <span class="pla-title">本次ICO计划出让的IP受益权比例为：</span>
                                 <div class="pla-content">
-                                    <span class="color1d9dbf"><label>**</label><input class="form-control" id="rate"/>%</span>
+                                    <span class="color1d9dbf"><label>**</label><input class="form-control" id="rate" onkeyup="onlyNumber(this)"  onblur="onlyNumber(this)"/>%</span>
                                     <i onclick="ready_to_edit4(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@
                             <div class="placeholder">
                                 <span class="pla-title">本次ICO计划募得：</span>
                                 <div class="pla-content">
-                                    <span class="color1d9dbf"><label>******</label><input class="form-control" id="plan"/></span>
+                                    <span class="color1d9dbf"><label>******</label><input class="form-control" id="plan" onkeyup="onlyNumber(this)"  onblur="onlyNumber(this)"/></span>
                                     <i onclick="ready_to_edit5(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
                                     <span class="bit-span">
                                         <img src="Images/bit.svg" />比特币
@@ -1011,8 +1011,13 @@
         $('#end-time').timebox({
             y: 10
         });
-        $('#rate').bind('input propertychange', function() {
-
+        $('#rate').on('keyup propertychange', function() {
+//            if( ! /^d*(?:.d{0,2})?$/.test(this.value)){
+//                alert(1);
+//            }
+//            if(isNaN($(this).val())){
+//                $(this).val($(this).val());
+//            }
         });
         $(".t-owner img").hover(function(){
             $(this).parent().find('.t-owner-mask').removeClass('hidden');
@@ -1288,6 +1293,18 @@
             $('.ico-title .col-l-2[value=ico-detail5]').addClass('active');
             $('.ico-detail5').removeClass('hide');
         }
+    }
+    function onlyNumber(obj){
+        var objobj = '';
+        //先把非数字的都替换掉，除了数字和.
+        objobj = obj.value.replace(/[^\d\.]/g,'');
+        //必须保证第一个为数字而不是.
+        objobj = objobj.replace(/^\./g,'');
+        //保证只有出现一个.而没有多个.
+        objobj = objobj.replace(/\.{2,}/g,'.');
+        //保证.只出现一次，而不能出现两次以上
+        objobj = objobj.replace('.','$#$').replace(/\./g,'').replace('$#$','.');
+        $(obj).val(objobj);
     }
 </script>
 </body>
