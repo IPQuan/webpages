@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>项目编辑</title>
+    <title>项目编辑--未审核</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -218,659 +218,19 @@
                                 <input type="hidden" id="hidden_content" />
                             </div>
                         </div>
+                        <div class="col-xs-12 text-center save-btns save-btns2 hidden ">
+                            <button onclick="project_save();" class="btn btn-info save" id="save">保存</button>
+                            <button class="btn btn-info save" data-toggle="modal" data-target="#submitModal">提交审核</button>
+                        </div>
                     </div>
                     <div class="ico-detail2 hide"><!--TODO ICO细则-->
-                        <div class="col-xs-12 detail-title">
-                            <div class="placeholder">
-                                <span class="pla-title">本次ICO计划出让的IP受益权比例为：</span>
-                                <div class="pla-content">
-                                    <span class="color1d9dbf"><label>**</label><input class="form-control" id="rate" onkeyup="onlyNumber(this)"  onblur="onlyNumber(this)"/>%</span>
-                                    <i onclick="ready_to_edit4(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 detail-title">
-                            <div class="placeholder">
-                                <span class="pla-title">本次ICO计划募得：</span>
-                                <div class="pla-content">
-                                    <span class="color1d9dbf"><label>******</label><input class="form-control" id="plan" onkeyup="onlyNumber(this)"  onblur="onlyNumber(this)"/></span>
-                                    <i onclick="ready_to_edit5(this)" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
-                                    <span class="bit-span">
-                                        <img src="Images/bit.svg" />比特币
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-6 detail-title edit">
-                            本次ICO计划开始时间为：<input type="text" id="begin-time"  class="form-control" value="2017-04-26 12:00"/>
-                        </div>
-                        <div class="col-xs-12 col-md-6 detail-title edit">
-                            本次ICO计划结束时间为：<input type="text" id="end-time" class="form-control" value="2017-05-02 12:00"/>
-                        </div>
-                        <div class="col-xs-12 line-hr"></div>
-                        <div class="col-xs-12">
-                            <div class="detail-title">ICO细则说明：</div>
-                            <div onclick="ready_to_edit3(this)">文里的意思是“木米乃”(Mumiai)，经过防腐处理的尸体就是我们现在所说的木乃伊(Mummy)。木乃伊被用亚麻布严实地包裹好后，就会被送到死者生前的住所里。埃及人的坟墓就是身份的象征，所以他们的坟墓不仅和真正的家外表酷似，就连里面的摆设也差不多，家具、乐器、厨师、仆人等一应俱全。
-
-                                这些坟墓最开始都建造在西部山区的岩石里，但随着埃及人的北迁，沙漠里也开始出现他们的坟墓。由于在沙漠里盗墓时有发生，而这是对死者尊严的践踏，因此古埃及人在坟墓上建造小石冢。后来，攀比之风日益盛行，石冢越修越高，最高的石冢将成为众人艳羡的对象。公元前13世纪的埃及国王胡夫法老，就以500多英尺的高度、13英亩的占地面积（相当于基督教的最大教堂圣彼得教堂的3倍）的石冢创造了历史之最，这就是我们今天所说的金字塔。
-
-                                根据历史记载，这个金字塔耗费了10多万奴隶20年的时间。就算是在现在，建造一个规模如此巨大的陵墓也是一个浩大的工程。很难想象，当时的埃及人是怎么完成的。更令人称奇的是，历经几千年的风吹雨打，甚至是战争的毁坏，通向法老陵墓中心的狭长小道仍然完好无损，这不能不说是一个奇迹。
-
-                                埃及的故事
-
-                                虽然自古以来，尼罗河一直和人类相交甚好，但它偶尔也会化身为严厉的监工。在它的教诲下，岸边的人们逐渐学会了“协作劳动”。他们不仅互帮互助，一起为保护自己的家园而努力，还学会了睦邻友好的艺术，这种一举两得的好事最直接的结果就是促进了一个有组织的国家的建立。
-                                后来，一个聪明又能干的人逐渐得到人们的信任和尊重，最终他不仅理所当然地担任社区领导的职务，还在西亚侵略者入侵这里时成了当仁不让的军事领袖。久而久之，他顺理成章地成了最无与伦比的人 国王（后来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。
-
-                                对勤恳的古埃及农民来说，只要法老不强征暴敛，法老做任何政治冒险的行为都与他们无关，他们心甘情愿接受法老的统治。虽然这使得埃及政治稳定，但如果遭遇外敌入侵，他们的情况将会非常糟糕。果不其然，古埃及2000多年独立的历史随着名为希克索斯的阿拉伯游牧部落的入侵而结束了，代价是埃及人度过了500年的痛不欲生的生活。除了野蛮的希克索斯人外，希伯莱人（即犹太人）也不受埃及人的欢迎。希伯莱人一路流亡到埃及的歌珊地区，埃及人接受了他们，没想到当埃及人失去独立自主权时，他们却倒戈相向，充当外国侵略者奴役埃及人的工具，这种忘恩负义的行为引起了埃及人的强烈愤慨。
-
-                                埃及人的苦难历史直到公元前1700年后底比斯人民起义成功才结束，最终希克索斯人被赶出尼罗河河谷，埃及人再次独立。
-
-                                但1000年后，随着亚述人傲视整个亚洲，埃及再次丧失独立，成为沙达纳帕卢斯帝国的领土。在埃及人民的奋力抗争下，公元前7世纪，埃及又一次获得独立，臣</div>
-                            <div class="form-group wysiwyg hidden">
-                                <!-- #region 富文本编辑器控制按钮 -->
-                                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor2">
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
-                                        <ul class="dropdown-menu"></ul>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                                            <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                                            <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-                                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-                                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
-                                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-                                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
-                                        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
-                                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
-                                        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
-                                        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
-                                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
-                                        <div class="dropdown-menu input-append">
-                                            <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                                            <button class="btn" type="button">Add</button>
-                                        </div>
-                                        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn2"><i class="icon-picture"></i></a>
-                                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn2" data-edit="insertImage" class="img-wrapper"/>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-                                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" onclick="fullScreen()" title="Full screen"><i class="fullscreen">&#xe633;</i></a>
-                                    </div>
-                                    <input type="text" data-edit="inserttext" id="voiceBtn2" x-webkit-speech="" class="hidden">
-                                </div>
-                                <!-- #endregion -->
-
-                                <div class="form-control min-height-800" id="editor2"></div>
-                            </div>
-                        </div>
                     </div>
                     <div class="ico-detail3 hide"><!--TODO 团队与社区-->
-                        <div id="user-list">
-                            <div class="t-detail-wrapper overflowAuto">
-                                <div class="t-owner col-xs-12 text-center">
-                                    <img src="Images/owner.png" />
-                                    <div class="t-owner-mask hidden"><img src="Images/delete.png" onclick="delete_user(this)" data-toggle="tooltip" data-placement="top" title="删除成员" /></div>
-                                    <div class="r-editor">晓物物</div>
-                                    <div><a href=""><i class="weibo active">&#xe73d;</i></a><a href=""><i class="weixin active">&#xe73c;</i></a><a href=""><i class="qq active">&#xe740;</i></a></div>
-                                </div>
-                                <div class="t-detail col-xs-12">
-                                    <div class="r-title">项目发起人</div>
-                                    <div class="r-content">
-                                        项目虽然自古以来，尼罗河一直和人类相交甚好，但它偶尔也会化身为严厉的监工。在它的教诲下，岸边的人们逐渐学会了“协作劳动”。他们不仅互帮互助，一起为保护自己的家园而努力，还学会了睦邻友好的艺术，这种一举两得的好事最直接的结果就是促进了一个有组织的国家的建立。
-                                        后来，一个聪明又能干的人逐渐得到人们的信任和尊重，最终他不仅理所当然地担任社区领导的职务，还在西亚侵略者入侵这里时成了当仁不让的军事领袖。久而久之，他顺理成章地成了最无与伦比的人 国王（后来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。者入侵这里时成了当仁不让的军事领袖。
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="t-detail-wrapper overflowAuto">
-                                <div class="t-owner col-xs-12 text-center">
-                                    <img src="Images/owner.png" />
-                                    <div class="t-owner-mask hidden"><img src="Images/delete.png" onclick="delete_user(this)" data-toggle="tooltip" data-placement="top" title="删除成员" /></div>
-                                    <div class="r-editor">晓物物</div>
-                                    <div><a href=""><i class="weibo active">&#xe73d;</i></a><a href=""><i class="weixin">&#xe73c;</i></a><a href=""><i class="qq">&#xe740;</i></a></div>
-                                </div>
-                                <div class="t-detail col-xs-12">
-                                    <div class="r-title">项目成员</div>
-                                    <div class="r-content">
-                                        项目虽然自古以来，尼罗河人们的信任和尊重，最终他不仅理所当然地担任社区领导的职务，还在西亚侵略者入侵这里时成了当仁不让的军事领袖。久而久之，他顺理成章地成了最无与伦比的人 国王（后来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。者入侵这里时成了当仁不让的军事领袖。
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add-user">
-                            <img src="Images/add.png" data-toggle="tooltip" data-placement="top" title="" data-original-title="添加成员" onclick="add_user();">
-                            <a data-toggle="modal" data-target="#addUserModal" class="hidden" id="add_user"></a>
-                        </div>
-                        <div class="code-wrapper text-center overflowAuto">
-                            <div class="col-xs-12 col-md-4 p-weibo">
-                                <div class="weibo-title"><i>&#xe65c;</i><span>项目微博</span></div>
-                                <i class="weibo-next">&#xe61a;</i>
-                                <img src="Images/code.png" />
-                            </div>
-                            <div class="col-xs-12 col-md-4 p-qq">
-                                <div class="qq-title"><i>&#xe648;</i><span>项目QQ群</span></div>
-                                <i class="qq-next">&#xe61a;</i>
-                                <img src="Images/code.png" />
-                            </div>
-                            <div class="col-xs-12 col-md-4 p-weixin">
-                                <div class="weixin-title"><i>&#xe603;</i><span>项目微信群</span></div>
-                                <i class="weixin-next">&#xe61a;</i>
-                                <img src="Images/code.png" />
-                            </div>
-                        </div>
-                        <div class="code-wrapper text-center overflowAuto">
-                            <div class="col-xs-12 col-md-4 p-weibo disabled">
-                                <div class="weibo-title"><i>&#xe65c;</i><span>项目微博</span></div>
-                                <i class="weibo-next">&#xe61a;</i>
-                                <div>
-                                    <div class="edit-code">
-                                        <img src="Images/none.png" id="edit-code-img1"/>
-                                        <img src="Images/add.png" data-toggle="tooltip" data-placement="top" title="" data-original-title="添加二维码" onclick="$('#fileupload2').click()" class="edit-code-img">
-                                        <input id="fileupload2" class="form-control" type="file" style="display:none" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4 p-qq disabled">
-                                <div class="qq-title"><i>&#xe648;</i><span>项目QQ群</span></div>
-                                <i class="qq-next">&#xe61a;</i>
-                                <img src="Images/none.png" />
-                            </div>
-                            <div class="col-xs-12 col-md-4 p-weixin disabled">
-                                <div class="weixin-title"><i>&#xe603;</i><span>项目微信群</span></div>
-                                <i class="weixin-next">&#xe61a;</i>
-                                <img src="Images/none.png" />
-                            </div>
-                        </div>
                     </div>
                     <div class="ico-detail4 hide"><!--TODO 团队与社区-->
-                        <div class="comment-wrapper overflowAuto">
-                            <div class="col-xs-12 comment-title-wrapper text-center">
-                                <div class="comment-title">提问</div>
-                            </div>
-                            <div class="col-xs-12 comment-detail"><!--TODO Q&A-->
-                                <textarea placeholder="向项目团队提出你的问题吧！"></textarea>
-                                <div class="send-comment">
-                                    <a class="cancel" onclick="to_cancel()">取消</a>
-                                    <a class="send" onclick="to_send(this)">发送</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 comment-list">
-                            <div id="comment-list01">
-                                <div class="listWrapper">
-                                    <div class="sender">
-                                        <div class="comment-num" data-toggle="tooltip" data-placement="top" title="排序" value="01">01</div>
-                                        <div class="comment-delete">
-                                            <div class="delete-wrapper">
-                                                <img src="Images/delete.svg" onclick="to_delete(this)" value="01" data-toggle="tooltip" data-placement="top" title="删除" />
-                                            </div>
-                                        </div>
-                                        <div class="comment-round">
-                                            白兰花：&nbsp;
-                                        </div>
-                                        <div class="comment-content">
-                                            <div class="comment-reply">
-                                                这是一个人的评价
-                                            </div>
-                                            <div class="comment-date">
-                                                <span class="dateH">2016/12/5 11:01:58</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="replier">
-                                        <div class="editCommentWrapper">
-                                            <div class="comment-round">晓物物：&nbsp;</div>
-                                            <div class="comment-content">
-                                                <div class="comment-reply">
-                                                    看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。看完项目说明比较晕，能否简要说明募集规则。个-283个WIN，请问这两个数字怎么得出来的？
-                                                </div>
-                                                <div class="comment-date">
-                                                    <span class="dateH">2016/12/5 11:01:58</span>
-                                                    <i onclick="to_edit(this)" value="01" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
-                                                </div>
-                                                <div class="editComment hide">
-                                                    <textarea></textarea>
-                                                    <div class="send-comment">
-                                                        <a class="cancel" value="01" onclick="to_cancel_send(this)">取消</a>
-                                                        <a class="send" value="01" onclick="to_edit_send(this)">发送</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="comment-list02">
-                                <div class="listWrapper">
-                                    <div class="sender">
-                                        <div class="comment-num" data-toggle="tooltip" data-placement="top" title="排序" value="02">02</div>
-                                        <div class="comment-delete">
-                                            <div class="delete-wrapper">
-                                                <img src="Images/delete.svg" onclick="to_delete(this)" value="02" data-toggle="tooltip" data-placement="top" title="删除" />
-                                            </div>
-                                        </div>
-                                        <div class="comment-round">
-                                            白兰花：&nbsp;
-                                        </div>
-                                        <div class="comment-content">
-                                            <div class="comment-reply">
-                                                看完项目说明比较晕，能否简要说明募集规则。1.募集总额是多少，是以人民币算还是ETC算。2.团队保留个-283个WIN，请问这两个数字怎么得出来的？
-                                            </div>
-                                            <div class="comment-date">
-                                                <span class="dateH">2016/12/5 11:01:58</span>
-                                                <i onclick="to_reply(this)" value="02" data-toggle="tooltip" data-placement="top" title="回复">&#xe61c;</i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="replier">
-                                        <div class="replyComment hide"><!--回复-->
-                                            <div class="comment-round">&nbsp;</div>
-                                            <div class="comment-content">
-                                                <textarea></textarea>
-                                                <div class="send-comment">
-                                                    <a class="cancel" value="02" onclick="to_reply_cancel(this)">取消</a>
-                                                    <a class="send" value="02" onclick="to_reply_send(this)">发送</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="editCommentWrapper hide">
-                                            <div class="comment-round">&nbsp;</div>
-                                            <div class="comment-content">
-                                                <div class="comment-reply">
-                                                </div>
-                                                <div class="comment-date">
-                                                    <span class="dateH"></span>
-                                                    <i onclick="to_edit(this)" value="02" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i>
-                                                </div>
-                                                <div class="editComment hide">
-                                                    <textarea></textarea>
-                                                    <div class="send-comment">
-                                                        <a class="cancel" value="02" onclick="to_cancel_send(this)">取消</a>
-                                                        <a class="send" value="02" onclick="to_edit_send(this)">发送</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div id="page"></div>
-                        </div>
                     </div>
                     <div class="ico-detail5 hide"><!--TODO 项目更新-->
-                        <div class="col-xs-12">
-                            <div class="detail-title detail-title2">发布项目更新：</div>
-                            <div onclick="ready_to_edit6(this)" class="content">文里的意思是“木米乃”(Mumiai)，经过防腐处理的尸体就是我们现在所说的木乃伊(Mummy)。木乃伊被用亚麻布严实地包裹好后，就会被送到死者生前的住所里。埃及人的坟墓就是身份的象征，所以他们的坟墓不仅和真正的家外表酷似，就连里面的摆设也差不多，家具、乐器、厨师、仆人等一应俱全。
-
-                                这些坟墓最开始都建造在西部山区的岩石里，但随着埃及人的北迁，沙漠里也开始出现他们的坟墓。由于在沙漠里盗墓时有发生，而这是对死者尊严的践踏，因此古埃及人在坟墓上建造小石冢。后来，攀比之风日益盛行，石冢越修越高，最高的石冢将成为众人艳羡的对象。公元前13世纪的埃及国王胡夫法老，就以500多英尺的高度、13英亩的占地面积（相当于基督教的最大教堂圣彼得教堂的3倍）的石冢创造了历史之最，这就是我们今天所说的金字塔。
-
-                                根据历史记载，这个金字塔耗费了10多万奴隶20年的时间。就算是在现在，建造一个规模如此巨大的陵墓也是一个浩大的工程。很难想象，当时的埃及人是怎么完成的。更令人称奇的是，历经几千年的风吹雨打，甚至是战争的毁坏，通向法老陵墓中心的狭长小道仍然完好无损，这不能不说是一个奇迹。
-
-                                埃及的故事<br/>
-
-                                虽然自古以来，尼罗河一直和人类相交甚好，但它偶尔也会化身为严厉的监工。在它的教诲下，岸边的人们逐渐学会了“协作劳动”。他们不仅互帮互助，一起为保护自己的家园而努力，还学会了睦邻友好的艺术，这种一举两得的好事最直接的结果就是促进了一个有组织的国家的建立。
-                                后来，一个聪明又能干的人逐渐得到人们的信任和尊重，最终他不仅理所当然地担任社区领导的职务，还在西亚侵略者入侵这里时成了当仁不让的军事领袖。久而久之，他顺理成章地成了最无与伦比的人 国王（后来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。
-                                <br/>
-                                对勤恳的古埃及农民来说，只要法老不强征暴敛，法老做任何政治冒险的行为都与他们无关，他们心甘情愿接受法老的统治。虽然这使得埃及政治稳定，但如果遭遇外敌入侵，他们的情况将会非常糟糕。果不其然，古埃及2000多年独立的历史随着名为希克索斯的阿拉伯游牧部落的入侵而结束了，代价是埃及人度过了500年的痛不欲生的生活。除了野蛮的希克索斯人外，希伯莱人（即犹太人）也不受埃及人的欢迎。希伯莱人一路流亡到埃及的歌珊地区，埃及人接受了他们，没想到当埃及人失去独立自主权时，他们却倒戈相向，充当外国侵略者奴役埃及人的工具，这种忘恩负义的行为引起了埃及人的强烈愤慨。
-
-                                埃及人的苦难历史直到公元前1700年后底比斯人民起义成功才结束，最终希克索斯人被赶出尼罗河河谷，埃及人再次独立。
-
-                                但1000年后，随着亚述人傲视整个亚洲，埃及再次丧失独立，成为沙达纳帕卢斯帝国的领土。在埃及人民的奋力抗争下，公元前7世纪，埃及又一次获得独立，臣</div>
-                            <div class="form-group wysiwyg hidden">
-                                <!-- #region 富文本编辑器控制按钮 -->
-                                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor3">
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
-                                        <ul class="dropdown-menu"></ul>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                                            <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                                            <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-                                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-                                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
-                                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-                                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
-                                        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
-                                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
-                                        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
-                                        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
-                                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
-                                        <div class="dropdown-menu input-append">
-                                            <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                                            <button class="btn" type="button">Add</button>
-                                        </div>
-                                        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn3"><i class="icon-picture"></i></a>
-                                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn3" data-edit="insertImage" class="img-wrapper"/>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-                                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a class="btn" onclick="fullScreen()" title="Full screen"><i class="fullscreen">&#xe633;</i></a>
-                                    </div>
-                                    <input type="text" data-edit="inserttext" id="voiceBtn3" x-webkit-speech="" class="hidden">
-                                </div>
-                                <!-- #endregion -->
-
-                                <div class="form-control min-height-600" id="editor3"></div>
-                            </div>
-                            <div class="text-center save-btns save-btns1 hidden" id="save-btns1">
-                                <button onclick="" class="btn btn-info save" id="save2">保存</button>
-                                <button onclick="" class="btn btn-info save">发布</button>
-                            </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="detail-title detail-title2">以往项目更新：</div>
-                            <section id="cd-timeline" class="cd-container">
-                                <div class="cd-timeline-block">
-                                    <div class="cd-timeline-img">
-                                        03
-                                    </div>
-
-                                    <div class="cd-timeline-content">
-                                        <div>
-                                            <span>看完项目说明比较晕，能否简要说明募集规则</span>
-                                            <span class="cd-date">2017/3/12 1:01:58</span>
-                                            <i onclick="ready_to_edit7(this)" class="disabled" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">&#xe61c;</i>
-                                        </div>
-                                        <div class="cd-value">
-                                            <div class="cd-content hidden">
-                                                文里的意思是“木米乃”(Mumiai)，经过防腐处理的尸体就是我们现在所说的木乃伊(Mummy)。木乃伊被用亚麻布严实地包裹好后，就会被送到死者生前的住所里。埃及人的坟墓就是身份的象征，所以他们的坟墓不仅和真正的家外表酷似，就连里面的摆设也差不多，家具、乐器、厨师、仆人等一应俱全。
-
-                                                这些坟墓最开始都建造在西部山区的岩石里，但随着埃及人的北迁，沙漠里也开始出现他们的坟墓。由于在沙漠里盗墓时有发生，而这是对死者尊严的践踏，因此古埃及人在坟墓上建造小石冢。后来，攀比之风日益盛行，石冢越修越高，最高的石冢将成为众人艳羡的对象。公元前13世纪的埃及国王胡夫法老，就以500多英尺的高度、13英亩的占地面积（相当于基督教的最大教堂圣彼得教堂的3倍）的石冢创造了历史之最，这就是我们今天所说的金字塔。
-
-                                                根据历史记载，这个金字塔耗费了10多万奴隶20年的时间。就算是在现在，建造一个规模如此巨大的陵墓也是一个浩大的工程。很难想象，当时的埃及人是怎么完成的。更令人称奇的是，历经几千年的风吹雨打，甚至是战争的毁坏，通向法老陵墓中心的狭长小道仍然完好无损，这不能不说是一个奇迹。
-
-                                                埃及的故事
-
-                                                虽然自古以来，尼罗河一直和人类相交甚好，但它偶尔也会化身为严厉的监工。在它的教诲下，岸边的人们逐渐学会了“协作劳动”。他们不仅互帮互助，一起为保护自己的家园而努力，还学会了睦邻友好的艺术，这种一举两得的好事最直接的结果就是促进了一个有组织的国家的建立。
-                                                后来，一个聪明又能干的人逐渐得到人们的信任和尊重，最终他不仅理所当然地担任社区领导的职务，还在西亚侵略者入侵这里时成了当仁不让的军事领袖。久而久之，他顺理成章地成了最无与伦比的人 国王（后来被称为法老），从地中海沿岸到西部山区的辽阔土地都归他所有。
-
-                                                对勤恳的古埃及农民来说，只要法老不强征暴敛，法老做任何政治冒险的行为都与他们无关，他们心甘情愿接受法老的统治。虽然这使得埃及政治稳定，但如果遭遇外敌入侵，他们的情况将会非常糟糕。果不其然，古埃及2000多年独立的历史随着名为希克索斯的阿拉伯游牧部落的入侵而结束了，代价是埃及人度过了500年的痛不欲生的生活。除了野蛮的希克索斯人外，希伯莱人（即犹太人）也不受埃及人的欢迎。希伯莱人一路流亡到埃及的歌珊地区，埃及人接受了他们，没想到当埃及人失去独立自主权时，他们却倒戈相向，充当外国侵略者奴役埃及人的工具，这种忘恩负义的行为引起了埃及人的强烈愤慨。
-
-                                                埃及人的苦难历史直到公元前1700年后底比斯人民起义成功才结束，最终希克索斯人被赶出尼罗河河谷，埃及人再次独立。
-
-                                                但1000年后，随着亚述人傲视整个亚洲，埃及再次丧失独立，成为沙达纳帕卢斯帝国的领土。在埃及人民的奋力抗争下，公元前7世纪，埃及又一次获得独立，臣
-                                            </div>
-                                            <div class="form-group wysiwyg hidden">
-                                                <!-- #region 富文本编辑器控制按钮 -->
-                                                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor4">
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
-                                                        <ul class="dropdown-menu"></ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                                                            <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                                                            <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-                                                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-                                                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
-                                                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-                                                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
-                                                        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
-                                                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
-                                                        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
-                                                        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
-                                                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
-                                                        <div class="dropdown-menu input-append">
-                                                            <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                                                            <button class="btn" type="button">Add</button>
-                                                        </div>
-                                                        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn4"><i class="icon-picture"></i></a>
-                                                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn4" data-edit="insertImage" class="img-wrapper"/>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-                                                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" onclick="fullScreen()" title="Full screen"><i class="fullscreen">&#xe633;</i></a>
-                                                    </div>
-                                                    <input type="text" data-edit="inserttext" id="voiceBtn4" x-webkit-speech="" class="hidden">
-                                                </div>
-                                                <!-- #endregion -->
-
-                                                <div class="form-control min-height-600" id="editor4"></div>
-                                            </div>
-                                            <div class="text-center save-btns save-btns1 hidden" id="save-btns2">
-                                                <button class="btn btn-info save" onclick="save(this)">保存</button>
-                                                <button class="btn btn-info save">发布</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cd-timeline-block">
-                                    <div class="cd-timeline-img">
-                                        02
-                                    </div>
-                                    <div class="cd-timeline-content">
-                                        <div>
-                                            <span>看完项目说明比较晕，能否简要说明募集规则</span>
-                                            <span class="cd-date">2017/3/12 1:01:58</span>
-                                            <i onclick="ready_to_edit7(this)" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">&#xe61c;</i>
-                                        </div>
-                                        <div class="cd-value">
-                                            <div class="cd-content hidden">
-                                                1232113
-                                            </div>
-                                            <div class="form-group wysiwyg hidden">
-                                                <!-- #region 富文本编辑器控制按钮 -->
-                                                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor5">
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
-                                                        <ul class="dropdown-menu"></ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                                                            <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                                                            <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-                                                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-                                                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
-                                                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-                                                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
-                                                        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
-                                                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
-                                                        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
-                                                        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
-                                                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
-                                                        <div class="dropdown-menu input-append">
-                                                            <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                                                            <button class="btn" type="button">Add</button>
-                                                        </div>
-                                                        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn5"><i class="icon-picture"></i></a>
-                                                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn5" data-edit="insertImage" class="img-wrapper"/>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-                                                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" onclick="fullScreen()" title="Full screen"><i class="fullscreen">&#xe633;</i></a>
-                                                    </div>
-                                                    <input type="text" data-edit="inserttext" id="voiceBtn5" x-webkit-speech="" class="hidden">
-                                                </div>
-                                                <!-- #endregion -->
-
-                                                <div class="form-control min-height-600" id="editor5"></div>
-                                            </div>
-                                            <div class="text-center save-btns save-btns1 hidden" id="save-btns3">
-                                                <button class="btn btn-info save" onclick="save(this)">保存</button>
-                                                <button class="btn btn-info save">发布</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cd-timeline-block">
-                                    <div class="cd-timeline-img">
-                                        01
-                                    </div>
-                                    <div class="cd-timeline-content">
-                                        <div>
-                                            <span>项目重新整理</span>
-                                            <span class="cd-date">2017/3/12 1:01:58</span>
-                                            <i onclick="ready_to_edit7(this)" data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">&#xe61c;</i>
-
-                                        </div>
-                                        <div class="cd-value">
-                                            <div class="cd-content hidden">
-                                                233
-                                            </div>
-                                            <div class="form-group wysiwyg hidden">
-                                                <!-- #region 富文本编辑器控制按钮 -->
-                                                <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor6">
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
-                                                        <ul class="dropdown-menu"></ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                                                            <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                                                            <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-                                                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-                                                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
-                                                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-                                                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
-                                                        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
-                                                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
-                                                        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
-                                                        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
-                                                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
-                                                        <div class="dropdown-menu input-append">
-                                                            <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                                                            <button class="btn" type="button">Add</button>
-                                                        </div>
-                                                        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn6"><i class="icon-picture"></i></a>
-                                                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn6" data-edit="insertImage" class="img-wrapper"/>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-                                                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a class="btn" onclick="fullScreen()" title="Full screen"><i class="fullscreen">&#xe633;</i></a>
-                                                    </div>
-                                                    <input type="text" data-edit="inserttext" id="voiceBtn6" x-webkit-speech="" class="hidden">
-                                                </div>
-                                                <!-- #endregion -->
-
-                                                <div class="form-control min-height-600" id="editor6"></div>
-                                            </div>
-                                            <div class="text-center save-btns save-btns1 hidden" id="save-btns4">
-                                                <button class="btn btn-info save" onclick="save(this)">保存</button>
-                                                <button class="btn btn-info save">发布</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </section>
-                        </div>
-                        <div class="col-xs-12 page-wrapper">
-                            <div id="page2"></div>
-                        </div>
                     </div>
-                </div>
-                <div class="row text-center save-btns save-btns2 hidden">
-                    <button onclick="copy_to_hidden();" class="btn btn-info save" id="save">保存</button>
-                    <button onclick="copy_to_hidden();" class="btn btn-info save">提交审核</button>
                 </div>
             </div>
         </section>
@@ -939,41 +299,19 @@
         </div>
     </div>
 </footer>
-<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h5 class="modal-title modal-title2" id="myModalLabel">邀请/添加团队成员：</h5>
-                <hr />
             </div>
             <div class="modal-body">
                 <div>
-                    <dl class="dropdown dropdown2">
-                        <dt><a>
-                            <span class="d-wrapper">
-                                <span class="bit">被邀请人已有IP圈账号</span>
-                            </span>
-                        </a>
-                        </dt>
-                        <dd>
-                            <ul>
-                                <li><a><span class="bit">被邀请人已有IP圈账号</span></a></li>
-                                <li><a><span class="bit">被邀请人没有IP圈账号</span></a></li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <input type="text" placeholder="输入被邀请人的手机号码" class="invite-input"/>
+                    项目审核后将不能再编辑项目的相关内容，是否要确认提交审核？
                 </div>
-                <div class="modal-ck">
-                    <div class="squaredThree">
-                        <input type="checkbox" value="None" id="squaredThree" name="check" checked />
-                        <label for="squaredThree"></label>
-                    </div>
-                    <label for="squaredThree">给予该成员项目编辑权限</label>
-                </div>
-                <div class="modal-submit">
-                    <button type="button" class="btn btn-submit">提交邀请</button>
+                <div class="modal-submit modal-submit2">
+                    <button type="button" class="btn btn-change" onclick="sure_save();">确认</button>
+                    <button type="button" class="btn btn-cancel" onclick="cancel_save();">取消</button>
                 </div>
             </div>
         </div>
@@ -987,151 +325,22 @@
 <script src="libs/external/jquery.timebox/timebox.js"></script>
 <script src="Scripts/ICO.js"></script>
 <script>
-    $('#page').Paging({pagesize:10,count:28,callback:function(page,size,count){//pagesize:一页显示几个,count:一共多少个
-        <!--TODO 评论分页,刷新评论页内容-->
-        console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-    }});
-    $('#page2').Paging({pagesize:10,count:35,callback:function(page,size,count){//pagesize:一页显示几个,count:一共多少个
-        <!--TODO 评论分页,刷新评论页内容-->
-        console.log('当前第 ' +page +'页,每页 '+size+'条,总页数：'+count+'页')
-    }});
+    function sure_save(){
+        $('.close').click();
+        finish_to_edit($('#title'));
+        finish_to_edit2($('#introduction'));
+        finish_to_edit3($('#editor'));
+        changeImg2();
+        changeIsSave(false);
+    }
+    function cancel_save(){
+        $('.close').click();
+    }
     $(function ()
     {
         $('[data-toggle="tooltip"]').tooltip();
-        $('.comment-num').click(function(){
-             var text = $(this).html();
-             if(text.indexOf('**')!=-1){
-                 $(this).html('<input type="text" onblur="finish_edit(this)"/>');
-                 $(this).find('input').focus();
-             }
-        });
-        $('#begin-time').timebox({
-            y: 10
-        });
-        $('#end-time').timebox({
-            y: 10
-        });
-        $('#rate').on('keyup propertychange', function() {
-//            if( ! /^d*(?:.d{0,2})?$/.test(this.value)){
-//                alert(1);
-//            }
-//            if(isNaN($(this).val())){
-//                $(this).val($(this).val());
-//            }
-        });
-        $(".t-owner img").hover(function(){
-            $(this).parent().find('.t-owner-mask').removeClass('hidden');
-        });
-        $(".t-owner-mask").hover(function(){
-
-        },function(){
-            var _this = this;
-            setTimeout(function(){
-                $(_this).parent().find('.t-owner-mask').addClass('hidden');
-            },100)
-        });
-        setDefault();
         setEditDefault();
     });
-    function to_send(obj){<!--TODO ID命名规则-->
-        var id = $('.comment-list>div').length+1;
-        if(id<10){
-            id='0'+id;
-        }
-        var obj = {
-          newId : id,
-          user:'晓物物',
-          content:$('.comment-detail textarea').val().trim(),
-          date:getDate()
-        };
-        $('.comment-list').prepend('<div id="comment-list'+obj.newId+'"> <div class="listWrapper"> <div class="sender"> <div class="comment-num" data-toggle="tooltip" data-placement="top" title="排序" value="'+obj.newId+'">'+obj.newId+'</div> <div class="comment-delete"> <div class="delete-wrapper"> <img src="Images/delete.svg" onclick="to_delete(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="删除" /> </div> </div><div class="comment-round">'+obj.user+'：&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> '+obj.content+' </div> <div class="comment-date"> <span class="dateH">'+obj.date+'</span> <i onclick="to_reply(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="回复">&#xe61c;</i> </div> </div> </div> ' +
-                '<div class="replier"> <div class="replyComment hide"><!--回复--> <div class="comment-round">&nbsp;</div> <div class="comment-content"> <textarea></textarea> <div class="send-comment"> <a class="cancel" value="'+obj.newId+'" onclick="to_reply_cancel(this)">取消</a> <a class="send" value="'+obj.newId+'" onclick="to_reply_send(this)">发送</a> </div> </div> </div> <div class="editCommentWrapper hide"> <div class="comment-round">&nbsp;</div> <div class="comment-content"> <div class="comment-reply"> </div> <div class="comment-date"> <span class="dateH"></span> <i onclick="to_edit(this)" value="'+obj.newId+'" data-toggle="tooltip" data-placement="top" title="修改">&#xe61c;</i> </div> <div class="editComment hide"> <textarea></textarea> <div class="send-comment"> <a class="cancel" value="'+obj.newId+'" onclick="to_cancel_send(this)">取消</a> <a class="send" value="'+obj.newId+'" onclick="to_edit_send(this)">发送</a> </div> </div> </div> </div> </div> </div> </div>');
-        $(".comment-detail textarea").val('');
-        $('.comment-num').unbind('click');
-        $('.comment-num').click(function(){
-            var text = $(this).html();
-            if(text.indexOf('**')!=-1){
-                $(this).html('<input type="text" onblur="finish_edit(this)"/>');
-                $(this).find('input').focus();
-            }
-        });
-        $('[data-toggle="tooltip"]').tooltip();
-    }
-    function to_cancel(){
-        $(".comment-detail textarea").val('');
-    }
-    function to_edit(obj) {<!--TODO value 和其最上层comment-list的id最后几位数字对应-->
-        var id = $(obj).attr('value');
-        $('#comment-list'+id+ ' .replier .editComment').removeClass('hide').find('textarea').val($('#comment-list'+id+ ' .replier .comment-reply').html().trim()).focus();
-        $('#comment-list'+id+ ' .comment-num').html('**').tooltip('show');
-    }
-    function to_edit_send(obj){
-        var id = $(obj).attr('value');
-        var text = $('#comment-list'+id+ ' .editComment textarea').val();
-        $('#comment-list'+id+ ' .replier .comment-reply').html(text);
-        $('#comment-list'+id+ ' .editComment textarea').html('');
-        $('.editComment').addClass('hide');
-        $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
-        $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
-    }
-    function to_cancel_send(obj){
-        var id = $(obj).attr('value');
-        $('#comment-list'+id+ ' .replier .editComment').addClass('hide').find('textarea').html($('#comment-list'+id+ ' .replier .comment-reply').html().trim()).focus();
-        $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
-    }
-    function to_reply(obj){
-        var id = $(obj).attr('value');
-        $('#comment-list'+id+ ' .replyComment').removeClass('hide');
-        $('#comment-list'+id+ ' .replyComment textarea').focus();
-        $('#comment-list'+id+ ' .comment-num').html('**').tooltip('show');
-    }
-    function to_reply_send(obj){
-        var id = $(obj).attr('value');
-        var text = $('#comment-list'+id+' .replyComment textarea').val();
-        $('#comment-list'+id+ ' .editCommentWrapper .comment-reply').html(text);
-        $('#comment-list'+id+ ' .replyComment').addClass('hide');
-        $('#comment-list'+id+ ' .editCommentWrapper').removeClass('hide');
-        $('#comment-list'+id+ ' .editCommentWrapper .dateH').html(getDate());
-        $('#comment-list'+id+ ' .editCommentWrapper .comment-round').html('晓物物：');<!--TODO 作者的用户名-->
-        $('#comment-list'+id+ ' .sender').find('i').remove();
-        $('#comment-list'+id+ ' .comment-num').html(id).tooltip('hide');
-    }
-    function to_reply_cancel(obj){
-        var id = $(obj).attr('value');
-        $('#comment-list'+id+' .replyComment textarea').val('');
-        $('#comment-list'+id+ ' .replyComment').addClass('hide');
-        $('#comment-list'+id+ ' .comment-num').html(id);
-    }
-    function to_delete(obj){
-        var id = $(obj).attr('value');
-        $('#comment-list'+id).remove();
-    }
-    function getDate(){
-        var myDate = new Date();
-        var year = myDate.getFullYear();
-        var month = myDate.getMonth()+1;
-        var date = myDate.getDate();
-        var hour = myDate.getHours();
-        var min = myDate.getMinutes();
-        var second = myDate.getSeconds();
-        var time = year+'/'+month+'/'+date+' '+hour+':'+min+':'+second;
-        return time;
-
-    }
-    function finish_edit(obj){
-        var v= $(obj).parent().attr('value');
-        if($(obj).val().trim().length <= 0)
-        {
-             $('#comment-list'+v+ ' .comment-num').html('**');
-        }else{
-            var value = $(obj).val().trim();
-            $('#comment-list'+v+ ' div').attr('value',value);
-            $('#comment-list'+v+ ' i').attr('value',value);
-            $('#comment-list'+v+ ' img').attr('value',value);
-            $('#comment-list'+v+ ' a').attr('value',value);
-            $('#comment-list'+v).attr('id','comment-list'+value);
-        }
-    }
 </script>
 <link href="libs/external/bootstrap-wysiwyg/bootstrap-wysiwyg-min.css" rel="stylesheet" />
 <link href="libs/external/fontawesome/font-awesome.css" rel="stylesheet" />
@@ -1139,8 +348,13 @@
 <script src="libs/external/bootstrap-wysiwyg/jquery.hotkeys.js"></script>
 <script src="Scripts/ico_edit.js"></script>
 <script>
-    function copy_to_hidden() {
+    function project_save() {
         $("#hidden_content").val($("#editor").html());
+        finish_to_edit($('#title'));
+        finish_to_edit2($('#introduction'));
+        finish_to_edit3($('#editor'));
+        changeImg2();
+        changeIsSave(false);
     }
     function initToolbarBootstrapBindings() {
         var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
@@ -1162,20 +376,10 @@
         if ("onwebkitspeechchange" in document.createElement("input")) {
             var editorOffset = $('#editor').offset();
             $('#voiceBtn').css('position', 'absolute').offset({ top: editorOffset.top, left: editorOffset.left + $('#editor').innerWidth() - 35 });
-            $('#voiceBtn2').css('position', 'absolute').offset({ top: editorOffset.top, left: editorOffset.left + $('#editor2').innerWidth() - 35 });
-            $('#voiceBtn3').css('position', 'absolute').offset({ top: editorOffset.top, left: editorOffset.left + $('#editor3').innerWidth() - 35 });
-            $('#voiceBtn4').css('position', 'absolute').offset({ top: editorOffset.top, left: editorOffset.left + $('#editor4').innerWidth() - 35 });
-            $('#voiceBtn5').css('position', 'absolute').offset({ top: editorOffset.top, left: editorOffset.left + $('#editor5').innerWidth() - 35 });
-            $('#voiceBtn6').css('position', 'absolute').offset({ top: editorOffset.top, left: editorOffset.left + $('#editor6').innerWidth() - 35 });
         } else {
             $('#voiceBtn').hide();
-            $('#voiceBtn2').hide();
-            $('#voiceBtn3').hide();
-            $('#voiceBtn4').hide();
-            $('#voiceBtn5').hide();
-            $('#voiceBtn6').hide();
         }
-    };
+    }
     function showErrorAlert(reason, detail) {
         var msg = '';
         if (reason === 'unsupported-file-type') { msg = "Unsupported format " + detail; }
@@ -1184,24 +388,11 @@
         }
         $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
                 '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
-    };
+    }
     initToolbarBootstrapBindings();
     $('#editor').wysiwyg({ fileUploadError: showErrorAlert });
-    $('#editor2').wysiwyg({ fileUploadError: showErrorAlert });
-    $('#editor3').wysiwyg({ fileUploadError: showErrorAlert });
-    $('#editor4').wysiwyg({ fileUploadError: showErrorAlert });
-    $('#editor5').wysiwyg({ fileUploadError: showErrorAlert });
-    $('#editor6').wysiwyg({ fileUploadError: showErrorAlert });
 </script>
 <script type="text/javascript">
-
-    function preview(imgID, file) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $("#" + imgID).attr("src", e.target.result)
-        };
-        reader.readAsDataURL(file)
-    }
 
     $("#fileupload").change(function (e) {
         var files = e.target.files || e.dataTransfer.files;
@@ -1209,16 +400,6 @@
         var reader = new FileReader();
         reader.onload = function (e) {
             $('.topImg').css('background-image','url('+e.target.result+')');
-        };
-        reader.readAsDataURL(file);
-//        preview("project_img", files[0]);
-    });
-    $("#fileupload2").change(function (e) {
-        var files = e.target.files || e.dataTransfer.files;
-        var file = files[0];
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#edit-code-img1').attr('src',e.target.result);
         };
         reader.readAsDataURL(file);
     });
@@ -1250,61 +431,6 @@
             $(".fullscreen").html("&#xe616;");
             isFullScreen = true;
         }
-    }
-    $(document).ready(function() {
-        $(".dropdown img.flag").addClass("flagvisibility");
-
-        $(".dropdown dt a").click(function() {
-            $(".dropdown dd ul").toggle();
-        });
-
-        $(".dropdown dd ul li a").click(function() {
-            var text = $(this).html();
-            $(".d-wrapper").html(text);
-            $(".dropdown dd ul").hide();
-        });
-    });
-    function GetQueryString(name)
-    {
-        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if(r!=null)return  unescape(r[2]); return null;
-    }
-    function setDefault(){
-        var type = GetQueryString('type');
-        if(type == 2){
-            $('.ico-title .col-l-2').removeClass('active');
-            $('.ico-content>div').addClass('hide');
-            $('.ico-title .col-l-2[value=ico-detail2]').addClass('active');
-            $('.ico-detail2').removeClass('hide');
-        }else if(type == 3){
-            $('.ico-title .col-l-2').removeClass('active');
-            $('.ico-content>div').addClass('hide');
-            $('.ico-title .col-l-2[value=ico-detail3]').addClass('active');
-            $('.ico-detail3').removeClass('hide');
-        }else if(type == 4){
-            $('.ico-title .col-l-2').removeClass('active');
-            $('.ico-content>div').addClass('hide');
-            $('.ico-title .col-l-2[value=ico-detail4]').addClass('active');
-            $('.ico-detail4').removeClass('hide');
-        }else if(type == 5){
-            $('.ico-title .col-l-2').removeClass('active');
-            $('.ico-content>div').addClass('hide');
-            $('.ico-title .col-l-2[value=ico-detail5]').addClass('active');
-            $('.ico-detail5').removeClass('hide');
-        }
-    }
-    function onlyNumber(obj){
-        var objobj = '';
-        //先把非数字的都替换掉，除了数字和.
-        objobj = obj.value.replace(/[^\d\.]/g,'');
-        //必须保证第一个为数字而不是.
-        objobj = objobj.replace(/^\./g,'');
-        //保证只有出现一个.而没有多个.
-        objobj = objobj.replace(/\.{2,}/g,'.');
-        //保证.只出现一次，而不能出现两次以上
-        objobj = objobj.replace('.','$#$').replace(/\./g,'').replace('$#$','.');
-        $(obj).val(objobj);
     }
 </script>
 </body>

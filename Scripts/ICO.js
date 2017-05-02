@@ -65,13 +65,6 @@ window.onload = function(){//页面加载完成时
         smation('#project1',parseInt($('#project1 .bar')[0].style.width));
     }
     resizeBanner();
-    $('.ico-detail .ico-title .col-l-2').click(function(){
-        $('.ico-detail .ico-title .col-l-2').removeClass('active');
-        $('.ico-content > div').addClass('hide');
-        $(this).addClass('active');
-        var value = $(this).attr('value');
-        $('.'+value).removeClass('hide');
-    });
 };
 
 

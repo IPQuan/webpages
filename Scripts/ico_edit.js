@@ -126,13 +126,6 @@ function changeIsSave(obj){
         }
     }
 }
-$('#save').click(function(){
-    finish_to_edit($('#title'));
-    finish_to_edit2($('#introduction'));
-    finish_to_edit3($('#editor'));
-    changeImg2();
-    changeIsSave(false);
-});
 function setEditDefault(){
     $('#title').val($('#title').parent().find("label").html());
     $('#introduction').val(replaceTag($('#introduction').parent().find('.content').html().trim()));

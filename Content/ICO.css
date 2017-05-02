@@ -1059,6 +1059,9 @@ a.send:hover,a.send:focus{
 .save-btns1 button.save{
     margin:30px 0 55px 0;
 }
+.save-btns2 button.save{
+    margin:20px 0 0 0;
+}
 .full-screen{
     position: fixed;
     height: 100%;
@@ -1289,4 +1292,7 @@ a.send:hover,a.send:focus{
     .modal-body input.invite-input{
         width: 100%;
     }
+}
+.modal-submit2 button:last-child{
+    margin-left:10px;
 }
