@@ -86,6 +86,8 @@
                         <img src="Images/owner.png" />
                         <div class="marginTop13">项目发起人：<span class="userN">晓物物</span></div>
                         <div>关注人数：<span class="like"><i class="concerned">&#xe760;</i>526</span></div>
+                        <div>分享：<span class="share" data-toggle="modal" data-target="#shareModal"><i class="concerned">&#xe62a;</i>5261</span></div>
+                        <div>分享：<span class="share" data-toggle="modal" data-target="#shareModal2"><i class="concerned">&#xe62a;</i>5261</span></div>
                     </div>
                     <div class="p-introduction text-left placeholder col-xs-12">
                         <div class="content" onclick="ready_to_edit2(this)">
@@ -101,6 +103,8 @@
                         <img src="Images/owner.png" />
                         <div class="marginTop13">项目发起人：<span class="userN">晓物物</span></div>
                         <div>关注人数：<span class="like"><i class="concerned">&#xe760;</i>526</span></div>
+                        <div>分享：<span class="share"  data-toggle="modal" data-target="#shareModal"><i class="concerned">&#xe62a;</i>5261</span></div>
+                        <div>分享：<span class="share" data-toggle="modal" data-target="#shareModal2"><i class="concerned">&#xe62a;</i>5261</span></div>
                     </div>
                     <div class="col-xs-12">
                         <a class="catDetail" href="#">浏览项目详情<i>&#xe61a;</i></a>
@@ -312,6 +316,71 @@
                 <div class="modal-submit modal-submit2">
                     <button type="button" class="btn btn-change" onclick="sure_save();">确认</button>
                     <button type="button" class="btn btn-cancel" onclick="cancel_save();">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <header class="share-header">
+                    分享项目
+                    <hr>
+                </header>
+                <button type="button" class="close move" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row font-16"><div class="col-xs-3 field padding0"><span class="hidden-xs">项目</span>个性化网址</div><div class="col-xs-9 field field-alert text-right padding0 color1d9dbf">还可以输入<span id="text_count3">16</span>个字</div></div>
+                <div class="edit edit2 form-group has-feedback">
+                    <div class="input-group">
+                        <span class="website input-group-addon">https://www.ipquan.com/project/</span>
+                        <textarea name="projectUrl" maxlength="16" style="resize: none;" oninput="setTextCount('text_count3', this)" class="form-control margin-right-0" data-bv-field="projectUrl"></textarea>
+                    </div>
+                    <div class="website remind-info modal-remind-info"><i>&#xe679;</i>个性化网址一旦设定不能修改，请慎重设定</div>
+                </div>
+                <div class="code-wrapper text-center overflowAuto">
+                    <a class="col-xs-12 col-md-4 p-cp">
+                        <div class="cp-title"><i>&#xe65f;</i><span>拷贝地址</span></div>
+                    </a>
+                    <a class="col-xs-12 col-md-4 p-weibo">
+                        <div class="weibo-title"><i>&#xe65c;</i><span>微博分享</span></div>
+                    </a>
+                    <a class="col-xs-12 col-md-4 p-weixin">
+                        <div class="weixin-title"><i>&#xe603;</i><span>微信分享</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shareModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <header class="share-header">
+                    分享项目
+                    <hr>
+                </header>
+                <button type="button" class="close move" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row font-16"><div class="col-xs-3 field padding0">项目网址</div></div>
+                <div class="edit edit2 form-group has-feedback">
+                    <div>https://www.ipquan.com/project/cioclubsdfdgfgfd</div>
+                </div>
+                <div class="website remind-info modal-remind-info">&nbsp;</div>
+                <div class="code-wrapper text-center overflowAuto">
+                    <a class="col-xs-12 col-md-4 p-cp">
+                        <div class="cp-title"><i>&#xe65f;</i><span>拷贝地址</span></div>
+                    </a>
+                    <a class="col-xs-12 col-md-4 p-weibo">
+                        <div class="weibo-title"><i>&#xe65c;</i><span>微博分享</span></div>
+                    </a>
+                    <a class="col-xs-12 col-md-4 p-weixin">
+                        <div class="weixin-title"><i>&#xe603;</i><span>微信分享</span></div>
+                    </a>
                 </div>
             </div>
         </div>

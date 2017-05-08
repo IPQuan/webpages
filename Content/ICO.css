@@ -187,7 +187,8 @@
     color:#fff;
     background:#ff957f;
     border-radius:100px;
-    width:60px;
+    min-width:56px;
+    padding:0 4px;
     height:20px;
     font-size:14px;
     letter-spacing:0;
@@ -200,10 +201,31 @@
 .p-owner .like .unconcerned{
     color:#fff;
 }
+.p-owner .share{
+    display: inline-block;
+    color:#fff;
+    background:#3ebcd0;
+    border-radius:100px;
+    min-width:56px;
+    height:20px;
+    font-size:14px;
+    letter-spacing:0;
+    padding:0 4px;
+    line-height:20px;
+    text-align:center;
+    cursor: pointer;
+}
 .p-owner .like i{
     font-size:14px;
     line-height:22px;
     margin-right:3px;
+}
+.p-owner .share i{
+    font-size:12px;
+    line-height:22px;
+    margin-right:3px;
+    position: relative;
+    top: -1px;
 }
 .chatDetail,.catDetail{
     display: block;
@@ -505,7 +527,7 @@ i.weixin.active{
 i.qq.active{
     color:#4990e2;
 }
-.p-weibo .weibo-title,.p-qq .qq-title,.p-weixin .weixin-title{
+.p-weibo .weibo-title,.p-qq .qq-title,.p-weixin .weixin-title,.p-cp .cp-title{
     background:#ed1b1b;
     border-radius:6px;
     max-width:251px;
@@ -526,7 +548,7 @@ i.qq.active{
     letter-spacing: 6px;
     background: #64cc13;
 }
-.weibo-title i,.qq-title i,.weixin-title i{
+.weibo-title i,.qq-title i,.weixin-title i,.cp-title i{
     font-size:48px;
     float: left;
     margin: 0 -12px 0 12px;
@@ -1295,4 +1317,46 @@ a.send:hover,a.send:focus{
 }
 .modal-submit2 button:last-child{
     margin-left:10px;
+}
+.modal-body .edit.edit2 textarea.form-control{
+    min-height: 40px;
+    line-height: 40px;
+    padding:0 6px;
+    margin-top: 0;
+}
+.padding0{
+    padding:0!important;
+}
+.modal-remind-info{
+    font-size:12px;
+    color:#1d9dbf;
+    letter-spacing:0;
+    line-height:45px;
+}
+.modal-remind-info i{
+    font-size: 13px;
+    vertical-align: 0;
+    margin-right: 5px;
+}
+.modal-body .code-wrapper .col-xs-12{
+    padding:0 5px;
+    margin-bottom:5px;
+}
+.p-cp .cp-title{
+    background:#1d9dbf;
+}
+.modal-body .code-wrapper .p-weibo .weibo-title,.modal-body .code-wrapper .p-cp .cp-title,.modal-body .code-wrapper  .p-weixin .weixin-title{
+    font-size: 20px;
+    height: 41px;
+    line-height: 42px;
+    letter-spacing:4.17px;
+}
+.modal-body .code-wrapper >a i{
+    font-size: 38px;
+}
+.modal-body .code-wrapper >.p-cp i{
+    font-size: 33px;
+}
+.close.move{
+    margin-top:-9px;
 }
